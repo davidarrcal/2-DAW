@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video mp4</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h1 class="titulo">Ejemplo de video</h1>
+
+        <div class="reproductor-contenedor">
+            <div class="video-wrapper">
+                <video controls="controls" id="myVideo">
+                    <source id="videoSource" src="Videos/<?php  echo $_REQUEST["videos"]?>.mp4" type="video/mp4"/> 
+                    Your browser does not support the <video> element. 
+                </video>
+            </div>
+            
+            <div class="controles-contenedor"> 
+                <button onclick="previous();"><img src="imagenes/flecha-izquierda.png" alt="previous">Previous</button>
+                <button onclick="playVideo();"><img src="imagenes/play.png" alt="play">Play</button>
+                <button onclick="pauseVideo();"><img src="imagenes/pause.png" alt="pause">Pause</button>
+                <button onclick="stopVideo();"><img src="imagenes/stop.png" alt="stop">Stop</button>
+                <button onclick="rewindVideo();"><img src="imagenes/rewind.png" alt="rewind">Rewind</button>
+                <button onclick="randomVideo();"><img src="imagenes/random.png" alt="random">Random</button>
+                <button onclick="next();"><img src="imagenes/flecha-derecha.png" alt="next">Next</button>
+            </div>   
+        </div>
+
+        <div class="menu-contenedor"> 
+            <span class="menu-titulo">Videos
+                <ul class="sub-menu-Videos">
+                    <li><a href="javascript:seleccionarVideo('Videos/1.mp4');">Video 1</a></li>
+                    <li><a href="javascript:seleccionarVideo('Videos/2.mp4');">Video 2</a></li>
+                    <li><a href="javascript:seleccionarVideo('Videos/3.mp4');">Video 3</a></li>
+                    <li><a href="javascript:seleccionarVideo('Videos/4.mp4');">Video 4</a></li>
+                </ul>
+            </span> 
+        </div> 
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        const theAudio = document.querySelector("#myVideo");
+        const videoSource = document.getElementById('videoSource');
+        
+        const videos = [
+            "Videos/1.mp4",
+            "Videos/2.mp4",
+            "Videos/3.mp4",
+            "Videos/4.mp4"
+        ];
+        
+        let currentVideoIndex = 0;
+
+        // FUNCIÓN Para cambiar video de manera centralizada
+        function changeVideo(index) {
+            if (index >= 0 && index < videos.length) {
+                currentVideoIndex = index;
+                theAudio.pause();
+                videoSource.src = videos[currentVideoIndex];
+                theAudio.load();
+                theAudio.play();
+                console.log(`Reproduciendo: ${videos[currentVideoIndex]} (${currentVideoIndex + 1}/${videos.length})`);
+            }
+        }
+
+        // Funciones de control 
+        function playVideo() { 
+            theAudio.play(); 
+        }
+        
+        function pauseVideo() { 
+            theAudio.pause(); 
+        }
+        
+        function stopVideo() { 
+            theAudio.currentTime = 0; 
+            theAudio.pause(); 
+        }
+        
+        function rewindVideo() { 
+            theAudio.currentTime = 0; 
+        }
+        
+        function previous(){
+            let newIndex = currentVideoIndex - 1;
+            if (newIndex < 0) {
+                newIndex = videos.length - 1;
+            }
+            changeVideo(newIndex);
+        }
+        
+        function next(){
+            let newIndex = currentVideoIndex + 1;
+            if (newIndex >= videos.length) {
+                newIndex = 0;
+            }
+            changeVideo(newIndex);
+        }
+
+        // Función de video aleatorio
+        function randomVideo() {
+            const indiceAleatorio = Math.floor(Math.random() * videos.length);
+            changeVideo(indiceAleatorio);
+        }
+        
+        // Función para seleccionar video desde el menú
+        function seleccionarVideo(rutaVideo) {
+            const index = videos.indexOf(rutaVideo);
+            if (index !== -1) {
+                changeVideo(index);
+            } else {
+                console.error("Video no encontrado en la lista");
+            }
+        }
+        
+
+        
+    </script>
+
+</body>
+</html>

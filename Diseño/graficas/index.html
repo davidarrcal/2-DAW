@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficas Meteorológicas</title>
+</head>
+<body>
+    <h1>Gráficas Meteorológicas</h1>
+    
+    <button onclick="cargarDatos()"> Introducir Datos</button>
+    <button onclick="cargarDesdePHP()">Cargar Datos desde PHP</button>
+    <button onclick="cargarDesdeBD()">Cargar desde Base de Datos</button>
+    
+    
+    
+    <h2>Gráficas disponibles:</h2>
+    <ul>
+        <li><a href="temperaturas.html">Gráfica de Temperaturas</a></li>
+        <li><a href="temperaturas-lluvias.html"> Gráfica de Lluvias</a></li>
+        <li><a href="histograma.html"> Gráfica Combinada</a></li>
+    </ul>
+
+    
+
+    <script>
+
+        const meses = [
+            'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+            'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+        ];
+
+       
+        function cargarDatos() {
+            const temperaturas = [];
+            const lluvias = [];
+            
+            for (let i = 0; i < 12; i++) {
+                const temp = prompt(`Introduce la temperatura para ${meses[i]} (ºC):`);
+                const lluvia = prompt(`Introduce la lluvia para ${meses[i]} (mm):`);
+                
+                temperaturas.push(parseFloat(temp) || 0);
+                lluvias.push(parseFloat(lluvia) || 0);
+            }
+            
+            const datos = { temperaturas, lluvias };
+            sessionStorage.setItem('datosMeteorologicos', JSON.stringify(datos));
+            
+            alert('Datos guardados correctamente');
+            
+        }
+            function cargarDesdePHP() {
+            window.location.href = 'cargar_datos.php';
+        }
+         function cargarDesdeBD() {
+            window.location.href = 'cargar_datosBD.php';
+        }
+        
+    </script>
+</body>
+</html>

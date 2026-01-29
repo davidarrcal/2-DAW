@@ -1,0 +1,407 @@
+:root{
+    --orange: #ff8c00;
+  }
+
+  body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    padding: 24px;
+    background: #f6f7fb;
+    color: #111;
+    line-height: 1.2;
+  }
+
+  h2 { margin-top: 36px; margin-bottom: 8px; font-size: 18px; }
+
+  .demo-row {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .box {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  }
+
+  /* ----------------------------------------------------
+     1) Cuadro giratorio 200x100 — gira 360° una sola vez,
+        lento al inicio y final, dura 3s y queda girado
+     ----------------------------------------------------*/
+  .spin-once {
+    width: 200px;
+    height: 100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: #e8e8e8;
+    border-radius: 6px;
+    margin: 10px;
+    font-weight: 700;
+    color:#222;
+    transform-origin: center;
+    /* lanzar la animación automáticamente al cargar */
+    animation: spinOnce 3s ease-in-out forwards;
+  }
+
+  @keyframes spinOnce {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); } /* queda girado al final */
+  }
+
+  /* ----------------------------------------------------
+     2) Desplazamiento por la pantalla - círculo azul
+        radio 100px (=> diámetro 200px), lento al inicio,
+        dura 5s.
+     ----------------------------------------------------*/
+  .move-circle {
+    width: 200px;
+    height: 200px; /* diámetro = 2 * radio */
+    border-radius: 50%;
+    background: #1e6ef3;
+    display:inline-block;
+    margin: 10px;
+    /* movimiento de izquierda a derecha dentro de viewport */
+    position: relative;
+    animation: moveAcross 5s ease-in forwards;
+  }
+
+  @keyframes moveAcross {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(100vw - 240px)); } /* compensamos padding/margins */
+  }
+
+  /* ----------------------------------------------------
+     3) Rodando: rueda que se desplaza 1200px en 5s y
+        rota sincronizada. Radio = 50px => circ = 100π ≈314.159
+        Rotaciones = 1200 / circumference ≈ 3.8197 => grados ≈ 1375°
+     ----------------------------------------------------*/
+  .rolling-wrap {
+    width: 100%; /* contenedor libre */
+    overflow: visible;
+    margin: 20px 0;
+  }
+
+  .rolling {
+    width: 100px;  /* diámetro 2*50px */
+    height: 100px;
+    border-radius: 50%;
+    background: #0071e3;
+    display:inline-block;
+    position: relative;
+    margin-left: 8px;
+    /* para ver la rotación, añadimos un "radio" blanco interior */
+    box-shadow: inset 0 0 0 16px rgba(255,255,255,0.85);
+    /* sincronizamos desplazamiento y rotación: translateX(0->1200px) rotate(0->1375deg) */
+    animation: rollMove 5s linear forwards;
+  }
+
+  @keyframes rollMove {
+    0%   { transform: translateX(0px) rotate(0deg); }
+    100% { transform: translateX(1200px) rotate(1375deg); } /* sincronizado para simular rodar sin resbalar */
+  }
+
+  /* ----------------------------------------------------
+     4) Zoom de un texto H1: al pasar ratón -> 3s total:
+        0-1s scale(2), 1-2s scale(0.25), 2-3s scale(1)
+        cambios lineales. Se activa al hover.
+     ----------------------------------------------------*/
+  .zoom h1 {
+    margin: 0;
+    display: inline-block;
+    transition: transform 0.3s;
+    transform-origin: center;
+  }
+
+  .zoom:hover h1 {
+    animation: zoomText 3s linear forwards;
+  }
+
+  @keyframes zoomText {
+    0%   { transform: scale(1); }
+    33.333% { transform: scale(2); }    /* 1s */
+    66.666% { transform: scale(0.25); } /* 2s */
+    100%    { transform: scale(1); }    /* 3s final */
+  }
+
+  /* ----------------------------------------------------
+     5) Cambios de colores: cuadrado 300px, rojo -> rosa -> azul
+        duración total 5s, primero roja a azul y luego inverso,
+        repetir 4 veces.
+     ----------------------------------------------------*/
+  .color-change {
+    width: 300px;
+    height: 300px;
+    border-radius: 6px;
+    margin: 10px;
+    animation: colorShift 5s linear alternate 4;
+    /* alternate hace ida y vuelta; iteration 4 repite el ciclo completo 4 veces (ida+vuelta) */
+  }
+
+  @keyframes colorShift {
+    0%   { background: #FF0000; }   /* rojo */
+    50%  { background: #FFC0CB; }   /* rosa a mitad */
+    100% { background: #0000FF; }   /* azul */
+  }
+
+  /* ----------------------------------------------------
+     6) Pantalla de scaneo: rectángulo negro 400x100,
+        barra blanca vertical difuminada 20px que se
+        desplaza de lado a lado. Cada ciclo completo 3s
+        (1.5s por sentido). Pausa al hover.
+     ----------------------------------------------------*/
+  .scan {
+    width: 400px;
+    height: 100px;
+    background: #000;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4) inset;
+  }
+
+  /* la banda la hacemos con un ::before en forma de gradiente para bordes difuminados */
+  .scan::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px; /* empezar fuera */
+    width: 40px; /* ancho suficiente para difuminar bordes (barra sugerida 20px) */
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 40%, rgba(255,255,255,0.9) 60%, rgba(255,255,255,0) 100%);
+    filter: blur(4px);
+    transform: translateX(0);
+    animation: scanMove 3s ease-in-out infinite alternate;
+    /* el alternate hace ida y vuelta: 1.5s cada sentido en tiempo total 3s */
+  }
+
+  @keyframes scanMove {
+    0%   { transform: translateX(-40px); }
+    100% { transform: translateX(calc(100% + 40px)); }
+  }
+
+  /* pausa al hover */
+  .scan:hover::before {
+    animation-play-state: paused;
+  }
+
+  /* ----------------------------------------------------
+     7) Giros 3D a dos caras: cartel 400x400 con cara frontal y posterior
+        (rojo y azul). Gira 180º mostrando la cara trasera. Perspectiva visible.
+     ----------------------------------------------------*/
+  .flip-container {
+    width: 400px;
+    height: 400px;
+    perspective: 1200px;
+    margin: 10px;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.8s ease-in-out;
+    /* lanzamos animación automáticamente para que gire 180º */
+    animation: flip3D 1.8s ease-in-out forwards;
+    transform-origin: center;
+  }
+
+  .face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color: #fff;
+    border-radius: 6px;
+  }
+
+  .front { background: #c62828; }
+  .back  { background: #1565c0; transform: rotateY(180deg); }
+
+  @keyframes flip3D {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(180deg); }
+  }
+
+  /* ----------------------------------------------------
+     8) Puertas giratorias (4) — cristal, 3D, ligeramente desde arriba.
+        Cada vuelta dura 2s, comienza 2s después de cargar la página.
+     ----------------------------------------------------*/
+  .doors-wrap {
+    display:flex;
+    gap: 16px;
+    perspective: 1000px;
+    align-items: flex-end;
+    margin: 10px;
+  }
+
+  .door {
+    width: 100px;
+    height: 175px;
+    border-radius: 6px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    /* apariencia de cristal (semi-transparente) */
+    background: rgba(255,255,255,0.12);
+    border: 4px solid rgba(150,160,180,0.6);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: rgba(255,255,255,0.85);
+    font-weight:700;
+    /* animación continua (360deg) */
+    animation: doorSpin 2s linear infinite;
+    animation-delay: 2s; /* comienza 2s después de cargar la página */
+    /* inclinación para parecer vista desde arriba */
+    transform: rotateX(15deg);
+  }
+
+  /* damos a cada puerta un delay ligero distinto para efecto más natural */
+  .door:nth-child(1){ animation-delay: 2s; }
+  .door:nth-child(2){ animation-delay: 2.1s; }
+  .door:nth-child(3){ animation-delay: 2.2s; }
+  .door:nth-child(4){ animation-delay: 2.3s; }
+
+  @keyframes doorSpin {
+    0%   { transform: rotateX(15deg) rotateY(0deg); }
+    100% { transform: rotateX(15deg) rotateY(360deg); }
+  }
+
+  /* ----------------------------------------------------
+     9) Tarjeta que se pone en pie: 3 bloques 100x65, inicialmente horizontales
+        con sombra como sobre mesa, al pasar ratón se ponen vertical uno tras otro
+        con intervalos de 1s; al final vuelven a horizontal. Animación en 3D.
+     ----------------------------------------------------*/
+  .cards {
+    display:flex;
+    gap: 12px;
+    align-items: center;
+    margin: 10px;
+    perspective: 900px;
+  }
+
+  .card {
+    width: 100px;
+    height: 65px;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    transform-origin: center left;
+    transform-style: preserve-3d;
+    transform: rotateX(75deg); /* aspecto horizontal, ligeramente inclinado (tumbada) */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:700;
+    transition: box-shadow 0.3s;
+  }
+
+  .card.blue  { background: #2b6df6; }
+  .card.green { background: #1fb267; }
+  .card.brown { background: #8b5a2b; }
+
+  /* keyframes que suben a vertical y vuelven */
+  @keyframes standUp {
+    0%   { transform: rotateX(75deg); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+    25%  { transform: rotateX(0deg); box-shadow: 0 8px 18px rgba(0,0,0,0.14); } /* vertical */
+    50%  { transform: rotateX(0deg); box-shadow: 0 8px 18px rgba(0,0,0,0.14); } /* mantener */
+    75%  { transform: rotateX(75deg); box-shadow: 0 12px 30px rgba(0,0,0,0.25); } /* vuelta */
+    100% { transform: rotateX(75deg); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+  }
+
+  /* Se activa al hover del contenedor y aplicamos delays para secuenciar */
+  .cards:hover .card {
+    animation: standUp 4s ease-in-out forwards;
+  }
+  .cards:hover .card:nth-child(1){ animation-delay: 0s; }
+  .cards:hover .card:nth-child(2){ animation-delay: 1s; } /* 1s intervalo */
+  .cards:hover .card:nth-child(3){ animation-delay: 2s; }
+
+  /* ----------------------------------------------------
+     10) Tarjeta que se abre (cierre): 200x175; tapa verde por fuera,
+         blanca por dentro; la animación se inicia 1s después de mostrar
+         el bloque y tarda 4s en abrir.
+     ----------------------------------------------------*/
+  .open-card-wrap {
+    width: 200px;
+    height: 175px;
+    perspective: 900px;
+    margin: 10px;
+  }
+
+  .open-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    /* el "cuerpo" (interior) */
+  }
+
+  .open-card .content {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    position: absolute;
+    left: 0; top: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    backface-visibility: hidden;
+    z-index: 1;
+  }
+
+  .open-card .cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    transform-origin: left center;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    /* apariencia exterior verde */
+    background: linear-gradient(180deg,#2e7d32,#43a047);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:700;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 3;
+    /* animación que comienza 1s después de mostrar y dura 4s */
+    animation: openCover 4s ease-in-out 1s forwards;
+  }
+
+  /* simular cara interna de la tapa (blanco por dentro) - opcional */
+  .open-card .cover::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: 4px;
+    background: linear-gradient(180deg,#ffffff,#f7f7f7);
+    z-index: -1;
+    opacity: 0.0; /* no mostrar, solo referencia */
+  }
+
+  @keyframes openCover {
+    0%   { transform: rotateY(0deg); }
+    100% { transform: rotateY(-140deg); } /* abre mostrando el interior (no hace 180 para ver mejor) */
+  }
+
+  /* pequeños estilos para presentacion */
+  .label { font-size: 13px; color: #555; margin-top:6px; }
+
+  /* Responsive */
+  @media (max-width:900px){
+    .demo-row { flex-direction:column; }
+  }

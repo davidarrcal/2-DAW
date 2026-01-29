@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Definimos que el modo oscuro se activa con [data-theme="dark"] */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /* Colores extraídos de tu imagen */
+  --color-nike-dark: hsl(224, 21%, 14%);
+  --color-nike-gray: hsl(219, 12%, 42%);
+  --color-nike-light-gray: hsl(210, 60%, 98%);
+}
+
+@layer base {
+  body {
+    /* Esto hace que el cambio de color sea suave */
+    @apply transition-colors duration-300;
+  }
+}

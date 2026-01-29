@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@font-face{
+  font-family: 'Inter';
+  src: url('src/assets/Inter-VariableFont_opsz\,wght.ttf');
+};
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* =====COLORES===== */
+  
+  /* Colores principales */
+  --color-lime-green: hsl(163, 72%, 41%);
+  --color-bright-red: hsl(356, 69%, 56%);
+  
+  /* Redes sociales */
+  --color-facebook: hsl(208, 92%, 53%);
+  --color-twitter: hsl(203, 89%, 51%); 
+  --color-youtube: hsl(146, 97%, 10%); 
+  
+  /* Toggle y tema oscuro/claro */
+  --color-toggle: hsl(230, 22%, 74%);
+  
+  /* Tema OSCURO */
+  --color-very-dark-blue: hsl(222, 19%, 15%);
+  --color-dark-desaturated-blue: hsl(228, 28%, 20%);
+  --color-desaturated-blue: hsl(228, 34%, 66%);
+  
+  /* Tema CLARO */
+  --color-white: hsl(0, 6%, 100%);
+  --color-very-pale-blue: hsl(225, 106%, 98%);
+  --color-light-grayish-blue: hsl(227, 47%, 96%);
+  --color-dark-grayish-blue: hsl(226, 12%, 44%);
+  
+  /* Gradiente Instagram*/
+  --color-instagram-start: hsl(37, 97%, 70%);
+  --color-instagram-middle: hsl(5, 77%, 71%);
+  --color-instagram-end: hsl(329, 70%, 58%);
+
+  /*Degradado*/
+  --background-image-toggle-gradient:linear-gradient(to right ,hsl(210, 79%, 56%), hsl(146, 68%, 55%));
+  --background-image-instagram-gradient:linear-gradient(to right hsl(37, 97%, 70%), hsl(5, 77%, 71%), hsl(329, 70%, 58%));
+}

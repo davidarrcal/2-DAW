@@ -1,0 +1,277 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #333;
+  padding: 15px;
+  position: relative;
+  z-index: 100; /* Alto z-index para que el header siempre esté encima */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.foto {
+  width: 100px;
+  position: relative;
+  z-index: 5; /* Z-index para las fotos del header */
+  transition: transform 0.3s;
+}
+
+.foto:hover {
+  transform: scale(1.05);
+  z-index: 15; /* Aumenta el z-index al hacer hover */
+}
+
+.iconos {
+  width: 40px;
+  position: relative;
+  z-index: 5; /* Z-index para los iconos */
+  transition: all 0.3s;
+}
+
+.iconos:hover {
+  transform: scale(1.2);
+  z-index: 15; /* Aumenta el z-index al hacer hover */
+}
+
+.texto {
+  width: 70%;
+  text-align: center;
+  color: #f0f0f0;
+  position: relative;
+  z-index: 5;
+}
+
+.contenedor {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  flex: 1;
+  position: relative;
+  z-index: 2; /* Z-index menor que el header */
+}
+
+/* Aside izquierdo */
+.aside-izquierdo {
+  background: #f0f0f0;
+  padding: 15px;
+  width: 10%;
+  min-width: 120px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.aside-izquierdo ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  z-index: 11;
+}
+
+.aside-izquierdo li {
+  margin: 10px 0;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.aside-izquierdo li:hover {
+  transform: translateX(5px);
+}
+
+.aside-izquierdo a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  z-index: 12;
+  padding: 5px;
+  display: block;
+  border-radius: 3px;
+}
+
+.aside-izquierdo a:hover {
+  color: #0077cc;
+  background-color: rgba(0, 119, 204, 0.1);
+}
+
+.aside-derecho {
+  background: #ff0000;
+  padding: 15px;
+  width: 10%;
+  min-width: 120px;
+  position: relative;
+  z-index: 10;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  flex: 1;
+  padding: 0 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 15px;
+  margin: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 5;
+}
+
+.galeria img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 20; /* Alto z-index al hacer hover para que la imagen se superponga */
+}
+
+footer {
+  width: 100%;
+  text-align: center;  
+  padding: 20px 0;
+  background: #333;
+  color: white;
+  position: relative;
+  z-index: 90; /* Z-index menor que el header pero mayor que el contenido */
+}
+
+footer img {
+  width: 20%;
+  max-width: 150px;
+  position: relative;
+  z-index: 5;
+  transition: all 0.3s;
+}
+
+footer img:hover {
+  transform: scale(1.05);
+}
+
+/* Efecto de superposición para el aside izquierdo al hacer hover */
+.aside-izquierdo:hover {
+  z-index: 25;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de superposición para el aside derecho al hacer hover */
+.aside-derecho:hover {
+  z-index: 25;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries para Responsive */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .aside-izquierdo, .aside-derecho {
+    width: 15%;
+    z-index: 10;
+  }
+  
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .texto {
+    width: 60%;
+  }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    margin: 10px;
+    z-index: 2;
+  }
+  
+  .aside-izquierdo, .aside-derecho {
+    width: 100%;
+    margin-bottom: 15px;
+    min-width: unset;
+    z-index: 10;
+  }
+  
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+  
+  header {
+    flex-direction: column;
+    text-align: center;
+    z-index: 100;
+  }
+  
+  .texto {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  footer {
+    padding: 30px 0;
+    z-index: 90;
+  }
+  
+  footer img {
+    width: 30%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+  header {
+    padding: 10px;
+    z-index: 100;
+  }
+  
+  .foto {
+    width: 80px;
+    z-index: 5;
+  }
+  
+  .iconos {
+    width: 30px;
+    z-index: 5;
+  }
+  
+  .contenedor {
+    margin: 10px 5px;
+    z-index: 2;
+  }
+  
+  .galeria {
+    gap: 10px;
+  }
+  
+  .galeria img:hover {
+    transform: none; /* Elimina transform en móviles para mejor usabilidad */
+    z-index: 5;
+  }
+  
+  footer {
+    padding: 20px 0;
+    z-index: 90;
+  }
+  
+  footer img {
+    width: 40%;
+  }
+  
+  /* Ajustes para los elementos con z-index en móviles */
+  .aside-izquierdo, .aside-derecho {
+    z-index: 10;
+  }
+}

@@ -1,0 +1,72 @@
+*ERROR* 	v8.2.3	2026/01/21 - 12:19:40: PDOException: SQLSTATE[HY000]: General error: 1030 Got error 194 "Tablespace is missing for a table" from storage engine InnoDB in /var/www/html/classes/db/DbPDO.php:151
+Stack trace:
+#0 /var/www/html/classes/db/DbPDO.php(151): PDO->query('TRUNCATE TABLE ...')
+#1 /var/www/html/classes/db/Db.php(377): DbPDOCore->_query('TRUNCATE TABLE ...')
+#2 /var/www/html/classes/db/Db.php(567): DbCore->query('TRUNCATE TABLE ...')
+#3 /var/www/html/src/PrestaShopBundle/Install/Install.php(371): DbCore->execute('TRUNCATE TABLE ...')
+#4 /var/www/html/src/PrestaShopBundle/Install/Install.php(435): PrestaShopBundle\Install\Install->clearDatabase(true)
+#5 /var/www/html/install/controllers/http/process.php(179): PrestaShopBundle\Install\Install->installDefaultData('TractorShop', 'es', false, true)
+#6 /var/www/html/install/controllers/http/process.php(94): InstallControllerHttpProcess->processInstallDefaultData()
+#7 /var/www/html/install/classes/controllerHttp.php(277): InstallControllerHttpProcess->process()
+#8 /var/www/html/install/index.php(53): InstallControllerHttp::execute()
+#9 {main}
+
+Next PrestaShopException: SQLSTATE[HY000]: General error: 1030 Got error 194 "Tablespace is missing for a table" from storage engine InnoDB in /var/www/html/classes/db/DbPDO.php:153
+Stack trace:
+#0 /var/www/html/classes/db/Db.php(377): DbPDOCore->_query('TRUNCATE TABLE ...')
+#1 /var/www/html/classes/db/Db.php(567): DbCore->query('TRUNCATE TABLE ...')
+#2 /var/www/html/src/PrestaShopBundle/Install/Install.php(371): DbCore->execute('TRUNCATE TABLE ...')
+#3 /var/www/html/src/PrestaShopBundle/Install/Install.php(435): PrestaShopBundle\Install\Install->clearDatabase(true)
+#4 /var/www/html/install/controllers/http/process.php(179): PrestaShopBundle\Install\Install->installDefaultData('TractorShop', 'es', false, true)
+#5 /var/www/html/install/controllers/http/process.php(94): InstallControllerHttpProcess->processInstallDefaultData()
+#6 /var/www/html/install/classes/controllerHttp.php(277): InstallControllerHttpProcess->process()
+#7 /var/www/html/install/index.php(53): InstallControllerHttp::execute()
+#8 {main}
+*ERROR* 	v8.2.3	2026/01/21 - 12:38:16: PDOException: SQLSTATE[HY000]: General error: 1030 Got error 194 "Tablespace is missing for a table" from storage engine InnoDB in /var/www/html/classes/db/DbPDO.php:151
+Stack trace:
+#0 /var/www/html/classes/db/DbPDO.php(151): PDO->query('TRUNCATE TABLE ...')
+#1 /var/www/html/classes/db/Db.php(377): DbPDOCore->_query('TRUNCATE TABLE ...')
+#2 /var/www/html/classes/db/Db.php(567): DbCore->query('TRUNCATE TABLE ...')
+#3 /var/www/html/src/PrestaShopBundle/Install/Install.php(371): DbCore->execute('TRUNCATE TABLE ...')
+#4 /var/www/html/src/PrestaShopBundle/Install/Install.php(435): PrestaShopBundle\Install\Install->clearDatabase(true)
+#5 /var/www/html/install/controllers/http/process.php(179): PrestaShopBundle\Install\Install->installDefaultData('TractorShop', 'es', false, true)
+#6 /var/www/html/install/controllers/http/process.php(94): InstallControllerHttpProcess->processInstallDefaultData()
+#7 /var/www/html/install/classes/controllerHttp.php(277): InstallControllerHttpProcess->process()
+#8 /var/www/html/install/index.php(53): InstallControllerHttp::execute()
+#9 {main}
+
+Next PrestaShopException: SQLSTATE[HY000]: General error: 1030 Got error 194 "Tablespace is missing for a table" from storage engine InnoDB in /var/www/html/classes/db/DbPDO.php:153
+Stack trace:
+#0 /var/www/html/classes/db/Db.php(377): DbPDOCore->_query('TRUNCATE TABLE ...')
+#1 /var/www/html/classes/db/Db.php(567): DbCore->query('TRUNCATE TABLE ...')
+#2 /var/www/html/src/PrestaShopBundle/Install/Install.php(371): DbCore->execute('TRUNCATE TABLE ...')
+#3 /var/www/html/src/PrestaShopBundle/Install/Install.php(435): PrestaShopBundle\Install\Install->clearDatabase(true)
+#4 /var/www/html/install/controllers/http/process.php(179): PrestaShopBundle\Install\Install->installDefaultData('TractorShop', 'es', false, true)
+#5 /var/www/html/install/controllers/http/process.php(94): InstallControllerHttpProcess->processInstallDefaultData()
+#6 /var/www/html/install/classes/controllerHttp.php(277): InstallControllerHttpProcess->process()
+#7 /var/www/html/install/index.php(53): InstallControllerHttp::execute()
+#8 {main}
+*ERROR* 	v8.2.3	2026/01/21 - 13:02:20: PDOException: SQLSTATE[HY000]: General error: 1030 Got error 194 "Tablespace is missing for a table" from storage engine InnoDB in /var/www/html/classes/db/DbPDO.php:151
+Stack trace:
+#0 /var/www/html/classes/db/DbPDO.php(151): PDO->query('TRUNCATE TABLE ...')
+#1 /var/www/html/classes/db/Db.php(377): DbPDOCore->_query('TRUNCATE TABLE ...')
+#2 /var/www/html/classes/db/Db.php(567): DbCore->query('TRUNCATE TABLE ...')
+#3 /var/www/html/src/PrestaShopBundle/Install/Install.php(371): DbCore->execute('TRUNCATE TABLE ...')
+#4 /var/www/html/src/PrestaShopBundle/Install/Install.php(435): PrestaShopBundle\Install\Install->clearDatabase(true)
+#5 /var/www/html/install/controllers/http/process.php(179): PrestaShopBundle\Install\Install->installDefaultData('TractorShop', 'es', false, true)
+#6 /var/www/html/install/controllers/http/process.php(94): InstallControllerHttpProcess->processInstallDefaultData()
+#7 /var/www/html/install/classes/controllerHttp.php(277): InstallControllerHttpProcess->process()
+#8 /var/www/html/install/index.php(53): InstallControllerHttp::execute()
+#9 {main}
+
+Next PrestaShopException: SQLSTATE[HY000]: General error: 1030 Got error 194 "Tablespace is missing for a table" from storage engine InnoDB in /var/www/html/classes/db/DbPDO.php:153
+Stack trace:
+#0 /var/www/html/classes/db/Db.php(377): DbPDOCore->_query('TRUNCATE TABLE ...')
+#1 /var/www/html/classes/db/Db.php(567): DbCore->query('TRUNCATE TABLE ...')
+#2 /var/www/html/src/PrestaShopBundle/Install/Install.php(371): DbCore->execute('TRUNCATE TABLE ...')
+#3 /var/www/html/src/PrestaShopBundle/Install/Install.php(435): PrestaShopBundle\Install\Install->clearDatabase(true)
+#4 /var/www/html/install/controllers/http/process.php(179): PrestaShopBundle\Install\Install->installDefaultData('TractorShop', 'es', false, true)
+#5 /var/www/html/install/controllers/http/process.php(94): InstallControllerHttpProcess->processInstallDefaultData()
+#6 /var/www/html/install/classes/controllerHttp.php(277): InstallControllerHttpProcess->process()
+#7 /var/www/html/install/index.php(53): InstallControllerHttp::execute()
+#8 {main}

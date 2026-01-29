@@ -1,0 +1,389 @@
+﻿Task ID,Created At,Completed At,Last Modified,Name,Section/Column,Assignee,Assignee Email,Start Date,Due Date,Tags,Notes,Projects,Parent task,Blocked By (Dependencies),Blocking (Dependencies)
+"1211870068880063",2025-11-07,,2025-11-07,Cómo usar esta plantilla,📌 GUÍA DEL PROYECTO,,,,,"P1-Crítica,P2-Alta,P3-Media,P4-Baja,bug,feature,investigación","Se trata de un proyecto modelo o plantilla para el desarrollo de aplicaciones web. Tendremos como ejemplo el desarrollo de una tienda online ""Arte en Tela"" en las descripciones de cada tarea y subtarea.
+
+Es un sistema de gestión de proyectos de desarrollo de software encapsulado en una plantilla de Asana.
+    Es una hoja de ruta completa que guía al equipo desde la idea inicial hasta el mantenimiento.
+    Es una herramienta de comunicación que asegura que todos entiendan qué hay que hacer y por qué.
+    Es un manual de buenas prácticas que enseña al equipo cómo trabajar de forma organizada y eficiente dentro de Asana.
+
+Este proyecto es simplemente una guía, no todas las tareas serán necesarias hacer para superar el módulo profesional de proyecto, y en algunas tareas se tendrán que hacer subtareas para que tenga sentido dependiendo de cada proyecto.
+
+Actualmente, este proyecto es una lista de ""qués"", pero no define el ""cuándo"" ni el ""en qué orden"", sólo aparecen unas pocas dependencias en las descripciones de algunas tareas o subtareas.
+
+Hay que mejorar las dependencias entre tareas (y subtareas), asignar fechas de inicio y finalización estimadas.
+
+Hay que asignar responsables a cada tarea (y subtarea), por ejemplo:
+    Asigna tareas de diseño al diseñador.
+    Asigna tareas de backend al desarrollador de backend.
+    Asigna tareas de planificación y revisión al Jefe de Proyecto.
+
+Ten en cuenta el uso de etiquetas, te permiten categorizar y filtrar tu proyecto de formas muy potentes. Crea un sistema de etiquetas sencillo y consistente, por ejemplo:
+    Crea etiquetas por área: backend, frontend, devops, diseño.
+    Crea etiquetas por tipo de trabajo: bug, feature, investigación, documentación.
+    Crea etiquetas por prioridad: P1-Crítico, P2-Alto, P3-Medio.
+    Aplica las etiquetas correspondientes a cada tarea. Así, podrás filtrar y ver, por ejemplo, ""todas las tareas críticas del backend"".
+
+Necesitas tener una visión temporal del proyecto, para ello:
+    Asigna Fechas de Entrega a TODO. Esto es ahora tu herramienta más importante. Asigna una fecha de finalización realista a cada tarea principal y, si es posible, a las subtareas.
+    Usa la Vista de Lista Ordenada por Fecha. En la vista de ""Lista"" de tu proyecto, busca en la esquina superior derecha la opción de ""Ordenar"" y selecciona ""Fecha de entrega"". Esto transformará tu lista de tareas en una línea de tiempo cronológica, de arriba abajo. Verás claramente qué es lo siguiente que hay que entregar.
+    Utiliza la Vista de ""Calendario"". El plan gratuito SÍ incluye una vista de Calendario. Haz clic en la pestaña ""Calendario"" en la parte superior de tu proyecto. Verás todas tus tareas con fecha de entrega distribuidas en un calendario mensual. Es una forma excelente de visualizar la carga de trabajo de la semana o del mes y detectar posibles cuellos de botella.
+
+La gestión diaria del proyecto se basará en:
+    Fechas de Entrega: Son tu fuente de verdad para saber cuándo deben estar las cosas.
+    Vista de Lista (ordenada por fecha) y Vista de Calendario: Son tus herramientas para visualizar la línea de tiempo.
+    Menciones (@) en la Descripción: Son tu método para indicar dependencias y relaciones entre tareas.
+    Asignados: Sigue siendo crucial asignar cada tarea a una persona para que haya un responsable.
+    Etiquetas: Siguen estando disponibles en el plan gratuito y son muy útiles para filtrar. ¡Úsalas!
+",Aplicación Web,,,
+"1211805048167718",2025-10-31,,2025-11-07,Definición de Alcance y Objetivos,Ámbito y Planificación,,,,,,"    Descripción: Consiste en establecer los límites claros del proyecto de software. Se define qué se va a construir (el alcance) y qué no se va a construir (exclusiones), así como las metas técnicas medibles que definirán el éxito del proyecto (objetivos SMART de desarrollo).
+    Qué hay que hacer:
+        Redactar un documento de ""Alcance del Software"" o ""Project Charter"".
+        Listar las funcionalidades que incluirá el MVP (Producto Mínimo Viable).
+        Listar explícitamente las funcionalidades que se dejarán para futuras versiones.
+        Definir y documentar los objetivos SMART de desarrollo (calidad, rendimiento, entrega).
+    Ejemplo (Tienda Online ""Arte en Tela""):
+        Alcance: La v1 incluirá registro de usuarios, catálogo, carrito y pago con Stripe.
+        Exclusiones: La v1 NO incluirá un sistema de reseñas de clientes, integración con PayPal, ni un panel de analíticas para el administrador.
+        Objetivo SMART: ""Desplegar en producción la v1 del software para el 1 de junio de 2026, cumpliendo el 100% de los criterios de aceptación para los módulos definidos.""
+",Aplicación Web,,,
+"1211805048167719",2025-10-31,,2025-11-07,Elaborar el acta de constitución del proyecto (Project Charter).,,,,,,,"    Descripción: Es el documento formal que autoriza el inicio del proyecto. Es su ""certificado de nacimiento"", que alinea a todos los stakeholders sobre los objetivos de alto nivel.
+    Qué hay que hacer: Redactar un documento que incluya la visión del proyecto, los objetivos principales, los stakeholders clave, el jefe de proyecto asignado y el presupuesto preliminar. Conseguir la firma o aprobación de los patrocinadores del proyecto.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea un documento de 2 páginas que dice: ""El proyecto 'Arte en Tela v1' tiene como objetivo desarrollar una plataforma de e-commerce... El Jefe de Proyecto es [Nombre]. El Product Owner es [Nombre del cliente]. El presupuesto aprobado es [Cantidad]"".
+",,Definición de Alcance y Objetivos,,
+"1211805048167720",2025-10-31,,2025-11-07,Definir objetivos SMART y KPIs de éxito.,,,,,,,"    Descripción: Consiste en traducir las metas del proyecto en objetivos técnicos, específicos y medibles para el equipo de desarrollo, junto con los indicadores para monitorizar el progreso.
+    Qué hay que hacer: Realizar un taller con el equipo técnico para definir objetivos de entrega, rendimiento y calidad. Aplicar el filtro SMART a cada uno y seleccionar los KPIs correspondientes.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se define el objetivo SMART: ""Asegurar una cobertura de pruebas unitarias del 85% para la lógica de negocio del backend antes del despliegue final"". El KPI será: ""Porcentaje de cobertura de código reportado por la herramienta de CI/CD"".
+",,Definición de Alcance y Objetivos,,
+"1211805052615626",2025-10-31,,2025-11-07,Establecer los límites y exclusiones del proyecto.,,,,,,,"    Descripción: Es una de las acciones más importantes para evitar el ""scope creep"" (la ampliación descontrolada del alcance). Define explícitamente qué funcionalidades o características NO se van a construir en esta fase.
+    Qué hay que hacer: Hacer una lista de todas las funcionalidades solicitadas pero que se pospondrán para futuras versiones. Revisar y validar esta lista con el cliente o stakeholder para evitar malentendidos.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea una sección en el Project Charter llamada ""Exclusiones de la v1"", que incluye: ""Inicio de sesión con redes sociales"", ""Lista de deseos para clientes"", ""Recomendaciones de productos personalizadas"".
+",,Definición de Alcance y Objetivos,,
+"1211805052615627",2025-10-31,,2025-11-07,Análisis de Viabilidad,Ámbito y Planificación,,,,,,"    Descripción: Es una evaluación realista para determinar si el proyecto se puede llevar a cabo con los recursos, tiempo y conocimientos disponibles. Se analiza la viabilidad técnica, de recursos y temporal.
+    Qué hay que hacer:
+        Técnica: Evaluar si el equipo domina el stack tecnológico elegido (ej. React, Node.js, PostgreSQL).
+        Recursos: Confirmar que se dispone del personal necesario (backend, frontend, etc.) y las herramientas (licencias de software, servicios en la nube).
+        Temporal: Realizar una estimación de alto nivel para comprobar si la fecha de entrega deseada es realista.
+    Ejemplo (Tienda Online ""Arte en Tela""): El equipo confirma que tiene experiencia en Node.js para el backend y React para el frontend. La estimación inicial sugiere que 3 meses para el MVP es un plazo ajustado pero factible si se evitan desviaciones del alcance. Se necesitará una suscripción a un servicio de hosting como Vercel o AWS.
+",Aplicación Web,,,
+"1211805052615628",2025-10-31,,2025-11-07,Realizar estudio de viabilidad técnica.,,,,,,,"    Descripción: Consiste en verificar que el equipo de desarrollo posee el conocimiento y las herramientas necesarias para construir la solución propuesta, o si se necesita formación o contratar nuevos perfiles.
+    Qué hay que hacer: Analizar el stack tecnológico propuesto (lenguajes, frameworks, bases de datos). Evaluar la experiencia del equipo con estas tecnologías. Identificar posibles retos técnicos y cómo se abordarán.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se propone usar React para el frontend. El equipo lo domina, así que es viable. Se propone integrar una pasarela de pago X; nadie la ha usado antes. Se asigna tiempo para una ""Prueba de Concepto"" (PoC) para investigar su API.
+",,Análisis de Viabilidad,,
+"1211805052615629",2025-10-31,,2025-11-07,Realizar estudio de viabilidad económica y de recursos.,,,,,,,"    Descripción: Consiste en asegurar que el proyecto se puede pagar y que se dispone del personal necesario.
+    Qué hay que hacer: Estimar los costes de personal, licencias de software, servicios en la nube (hosting, BBDD), etc. Comparar la estimación con el presupuesto asignado. Confirmar la disponibilidad de los miembros del equipo durante el proyecto.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se calcula que el coste mensual de AWS será de unos 100€. El presupuesto lo cubre. Se confirma que el desarrollador frontend no tiene vacaciones planeadas durante los meses clave del proyecto.
+",,Análisis de Viabilidad,,
+"1211805052615630",2025-10-31,,2025-11-07,Evaluar la viabilidad temporal (plazos).,,,,,,,"    Descripción: Es una estimación de alto nivel para determinar si la fecha de entrega solicitada por el cliente es realista o si se debe renegociar.
+    Qué hay que hacer: Desglosar el proyecto en grandes bloques de trabajo (épicas). Estimar, de forma aproximada (en semanas o meses), cuánto tiempo llevará cada bloque. Comparar el total con la fecha límite.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se estima: Backend (6 semanas), Frontend (8 semanas), Pruebas (2 semanas). El total es de 16 semanas. Si el cliente quiere el proyecto en 8 semanas, se concluye que no es viable y se debe o bien ampliar el plazo o bien reducir el alcance del MVP.
+",,Análisis de Viabilidad,,
+"1211805052615631",2025-10-31,,2025-11-07,Planificación Inicial del Proyecto,Ámbito y Planificación,,,,,,"    Descripción: Consiste en crear un cronograma de alto nivel que desglosa el proyecto en fases principales e hitos clave. Es el primer borrador del mapa que guiará todo el desarrollo.
+    Qué hay que hacer:
+        Crear una estructura de desglose del trabajo (WBS - Work Breakdown Structure).
+        Definir los hitos principales (ej. ""Finalización de la API del backend"", ""Inicio de la fase de QA"").
+        Crear un diagrama de Gantt o usar la vista de Cronograma de Asana para visualizar las dependencias y plazos.
+    Ejemplo (Tienda Online ""Arte en Tela""):
+        Hito 1 (Mes 1): API del backend para productos y usuarios completada.
+        Hito 2 (Mes 2): Componentes de UI del frontend para catálogo y checkout finalizados.
+        Hito 3 (Mes 3): Fase de Pruebas y QA completada.
+",Aplicación Web,,,
+"1211805052615632",2025-10-31,,2025-11-07,Crear el cronograma inicial del proyecto.,,,,,,,"    Descripción: Es la creación de una línea de tiempo visual que detalla cuándo empezará y terminará cada fase o tarea principal del proyecto.
+    Qué hay que hacer: Utilizar la vista de Cronograma de Asana o una herramienta de diagramas de Gantt. Listar las tareas principales y asignarles fechas de inicio y fin estimadas. Establecer dependencias entre tareas.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea un cronograma donde la tarea ""Desarrollo del Frontend"" no puede empezar hasta que la tarea ""Diseño de la API"" esté completada, creando una dependencia visual.
+",,Planificación Inicial del Proyecto,,
+"1211805052615633",2025-10-31,,2025-11-07,Definir los hitos principales del proyecto.,,,,,,,"    Descripción: Un hito es un punto de control importante en el proyecto que marca la finalización de un entregable o fase clave. No es una tarea con duración, sino un momento en el tiempo.
+    Qué hay que hacer: Identificar los momentos más significativos del proyecto. Crearlos en Asana como tareas marcadas como hitos.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se definen los hitos: ""MVP del Backend Desplegado en Staging"", ""Diseño de UI Aprobado"", ""Fase de QA Iniciada"", ""Lanzamiento a Producción"".
+",,Planificación Inicial del Proyecto,,
+"1211805052615634",2025-10-31,,2025-11-07,Asignación inicial de roles y responsabilidades.,,,,,,,"    Descripción: Consiste en definir quién es responsable de qué en el proyecto para evitar confusiones.
+    Qué hay que hacer: Listar los miembros del equipo. Asignar roles claros (Jefe de Proyecto, Desarrollador Backend, Diseñador UX/UI). Se puede usar una matriz RACI (Responsable, Aprobador, Consultado, Informado) para las decisiones clave.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se documenta: [Nombre 1] es el único desarrollador Backend y responsable de la API y la base de datos. [Nombre 2] es el responsable del diseño en Figma y de la maquetación en React.
+",,Planificación Inicial del Proyecto,,
+"1211805052615636",2025-10-31,,2025-11-07,Recopilación de Requisitos Funcionales,Análisis de Requisitos,,,,,,"    Descripción: Consiste en detallar exactamente qué debe hacer el software desde la perspectiva del usuario. Son las funcionalidades y características que el usuario podrá ver y con las que podrá interactuar.
+    Qué hay que hacer:
+        Reunirse con los stakeholders para entender sus necesidades.
+        Escribir ""Historias de Usuario"" que describan una funcionalidad desde el punto de vista de un rol.
+        Documentar los ""Criterios de Aceptación"" para cada historia (cómo sabremos que está bien hecha).
+    Ejemplo (Tienda Online ""Arte en Tela""):
+        Historia de Usuario: ""Como cliente, quiero poder añadir una camiseta a mi carrito de la compra desde la página de producto para poder comprarla más tarde"".
+        Criterios de Aceptación: 1. El botón ""Añadir al carrito"" debe estar visible. 2. Al hacer clic, el icono del carrito en la cabecera debe actualizar su contador. 3. Una notificación debe confirmar que el producto se ha añadido.
+",Aplicación Web,,,
+"1211805052615637",2025-10-31,,2025-11-07,Realizar entrevistas y talleres con stakeholders.,,,,,,,"    Descripción: Es el proceso de comunicación directa con el cliente o los usuarios clave para extraer y entender en profundidad sus necesidades y expectativas sobre el software.
+    Qué hay que hacer: Preparar una agenda y una lista de preguntas. Organizar una o varias sesiones de trabajo. Tomar notas detalladas o grabar la sesión (con permiso).
+    Ejemplo (Tienda Online ""Arte en Tela""): Se organiza un taller de 3 horas con el dueño de la tienda para que explique paso a paso cómo se imagina que un cliente compra una camiseta y cómo él mismo quiere gestionar los productos en un panel de administración.
+",,Recopilación de Requisitos Funcionales,,
+"1211805052615638",2025-10-31,,2025-11-07,Crear historias de usuario (User Stories) y casos de uso.,,,,,,,"    Descripción: Consiste en traducir las notas de las entrevistas a un formato estructurado que el equipo de desarrollo pueda entender y trabajar.
+    Qué hay que hacer: Para cada funcionalidad, escribir una frase con el formato: ""Como [tipo de usuario], quiero [realizar una acción] para [obtener un beneficio]"". Añadir los ""Criterios de Aceptación"" que definen cuándo la historia está terminada.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea la historia: ""Como administrador de la tienda, quiero marcar un producto como 'agotado' para que los clientes no puedan comprarlo"". Criterio de aceptación: ""Cuando un producto está marcado como agotado, el botón 'Añadir al carrito' debe estar desactivado en la página de producto"".
+",,Recopilación de Requisitos Funcionales,,
+"1211805052615639",2025-10-31,,2025-11-07,Documentar y priorizar el backlog de producto.,,,,,,,"    Descripción: Es la creación y organización de la lista de trabajo pendiente. Todas las historias de usuario se recopilan en una lista (backlog) y se ordenan por importancia para decidir qué se construye primero.
+    Qué hay que hacer: Crear una tarea en Asana (o Jira) por cada historia de usuario. Trabajar con el Product Owner o cliente para ordenar la lista de arriba a abajo, poniendo lo más valioso y urgente al principio.
+    Ejemplo (Tienda Online ""Arte en Tela""): La historia ""Pagar un pedido"" se coloca en la cima del backlog (máxima prioridad). La historia ""Crear un código de descuento"" se coloca más abajo, ya que es importante pero no es esencial para el primer lanzamiento.
+",,Recopilación de Requisitos Funcionales,,
+"1211805052615640",2025-10-31,,2025-11-07,Recopilación de Requisitos No Funcionales,Análisis de Requisitos,,,,,,"    Descripción: Consiste en definir cómo debe ser el sistema. No se trata de funcionalidades, sino de cualidades y restricciones como el rendimiento, la seguridad, la fiabilidad o la compatibilidad.
+    Qué hay que hacer:
+        Definir tiempos de carga aceptables para las páginas.
+        Establecer los estándares de seguridad (ej. cómo se almacenarán las contraseñas).
+        Listar los navegadores y dispositivos que deben ser soportados.
+    Ejemplo (Tienda Online ""Arte en Tela""):
+        Rendimiento: La página de inicio debe cargar completamente en menos de 3 segundos.
+        Seguridad: Todas las contraseñas de usuario deben estar hasheadas con un algoritmo fuerte (ej. bcrypt).
+        Compatibilidad: La tienda debe funcionar correctamente en las últimas dos versiones de Chrome, Firefox y Safari.
+",Aplicación Web,,,
+"1211805052615641",2025-10-31,,2025-11-07,"Definir requisitos de rendimiento (tiempos de carga, concurrencia).",,,,,,,"    Descripción: Consiste en establecer metas medibles sobre qué tan rápida y robusta debe ser la aplicación.
+    Qué hay que hacer: Definir tiempos de respuesta aceptables para las llamadas a la API (ej. < 500ms). Establecer tiempos de carga de página (ej. LCP < 2.5s). Estimar cuántos usuarios concurrentes debe soportar el sistema sin degradarse.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se define: ""La página de un producto con todas sus imágenes debe cargar por completo en menos de 3 segundos en una conexión 4G"". Y ""El sistema debe poder soportar 100 usuarios navegando al mismo tiempo sin que los tiempos de respuesta se disparen"".
+",,Recopilación de Requisitos No Funcionales,,
+"1211805052615642",2025-10-31,,2025-11-07,"Definir requisitos de seguridad (autenticación, protección de datos).",,,,,,,"    Descripción: Consiste en establecer las medidas que se tomarán para proteger la aplicación y los datos de sus usuarios contra amenazas.
+    Qué hay que hacer: Definir la política de contraseñas (longitud, complejidad). Determinar cómo se protegerán los datos sensibles (ej. encriptación). Listar las vulnerabilidades comunes que se deben prevenir (ej. XSS, SQL Injection).
+    Ejemplo (Tienda Online ""Arte en Tela""): Se especifica: ""Todas las contraseñas de usuario deben ser hasheadas usando el algoritmo bcrypt. El acceso al panel de administración debe estar protegido por autenticación de dos factores (2FA)"".
+",,Recopilación de Requisitos No Funcionales,,
+"1211805052615643",2025-10-31,,2025-11-07,Definir requisitos de escalabilidad y compatibilidad.,,,,,,,"    Descripción: La escalabilidad define cómo crecerá el sistema si aumenta el número de usuarios. La compatibilidad define en qué plataformas (navegadores, sistemas operativos) debe funcionar correctamente.
+    Qué hay que hacer: Diseñar la arquitectura para que pueda crecer (ej. usando servicios en la nube que escalan automáticamente). Listar explícitamente los navegadores web y sus versiones a soportar.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se define: ""La arquitectura debe permitir duplicar la capacidad del servidor en menos de 1 hora"". Y ""La tienda online debe ser 100% funcional en las últimas dos versiones de Google Chrome, Mozilla Firefox y Apple Safari en escritorio y móvil"".
+",,Recopilación de Requisitos No Funcionales,,
+"1211805052615645",2025-10-31,,2025-11-07,Definir el Patrón de Arquitectura Global,Diseño de Arquitectura y Sistema,,,,,,"    Descripción: Es una de las decisiones técnicas más importantes. Consiste en decidir la estructura fundamental del software: si será una aplicación monolítica tradicional, una aplicación desacoplada con una API y un frontend separado (Headless), o un sistema de microservicios.
+    Qué hay que hacer:
+        Evaluar los pros y contras de cada patrón para este proyecto específico.
+        Documentar la decisión y justificarla en función de la escalabilidad, el equipo y la complejidad del proyecto.
+    Ejemplo (Tienda Online ""Arte en Tela""): El equipo decide usar una arquitectura desacoplada (Headless). Se construirá una API REST con Node.js y una aplicación de página única (SPA) con React para el frontend. Esto permitirá en el futuro crear una app móvil que consuma la misma API.
+",Aplicación Web,,,
+"1211805052615646",2025-10-31,,2025-11-07,Evaluar arquitectura monolítica tradicional (renderizada en servidor).,,,,,,,"    Descripción: Consiste en analizar la idoneidad de construir la aplicación como una única unidad de código donde el frontend y el backend están fuertemente acoplados (ej. usando frameworks como Ruby on Rails, Django, Laravel).
+    Qué hay que hacer: Considerar la simplicidad de desarrollo y despliegue de este enfoque. Evaluar si la interactividad requerida en el frontend justifica un desacoplamiento o si el renderizado en servidor es suficiente.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se analiza que un monolito sería más rápido de desarrollar inicialmente. Sin embargo, se descarta porque el cliente tiene planes a medio plazo para una app nativa, y una API facilitaría ese futuro desarrollo.
+",,Definir el Patrón de Arquitectura Global,,
+"1211805052615647",2025-10-31,,2025-11-07,Evaluar arquitectura desacoplada/headless con API.,,,,,,,"    Descripción: Consiste en analizar la opción de separar completamente el backend (que expone una API) del frontend (una aplicación separada, usualmente una SPA - Single Page Application).
+    Qué hay que hacer: Valorar las ventajas de tener equipos trabajando en paralelo, la flexibilidad para crear múltiples ""clientes"" (web, móvil) y los posibles inconvenientes (mayor complejidad en el despliegue y la gestión de la seguridad).
+    Ejemplo (Tienda Online ""Arte en Tela""): Se evalúa que esta arquitectura es ideal. El equipo de backend puede centrarse en la API de Node.js mientras el equipo de frontend trabaja en la tienda con React. Se asume la complejidad de usar JWT para la autenticación.
+",,Definir el Patrón de Arquitectura Global,,
+"1211805052615648",2025-10-31,,2025-11-07,Evaluar arquitectura de microservicios (si aplica).,,,,,,,"    Descripción: Consiste en analizar si el proyecto es lo suficientemente grande y complejo como para justificar la división del backend en múltiples servicios pequeños e independientes.
+    Qué hay que hacer: Evaluar si hay partes del sistema claramente delimitadas que podrían funcionar de forma autónoma (ej. servicio de pagos, servicio de notificaciones). Considerar la alta complejidad operativa que introduce.
+    Ejemplo (Tienda Online ""Arte en Tela""): Para el MVP, se descarta por completo. Es una complejidad innecesaria. Se documenta que, si la tienda crece exponencialmente, en el futuro se podría migrar la lógica de ""pedidos"" a un microservicio separado.
+",,Definir el Patrón de Arquitectura Global,,
+"1211805052615649",2025-10-31,,2025-11-07,Seleccionar y documentar la arquitectura elegida y sus fundamentos.,,,,,,,"    Descripción: Es el acto de formalizar la decisión tomada tras la evaluación.
+    Qué hay que hacer: Redactar un documento de Diseño de Arquitectura. Explicar claramente el patrón elegido y, lo más importante, el ""porqué"" de esa decisión (los motivos, los pros y los contras considerados).
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea un documento en Confluence que dice: ""La arquitectura elegida es Headless con una API REST en Node.js y una SPA en React. Se ha seleccionado por su flexibilidad para futuros clientes y la posibilidad de desarrollo en paralelo. Se descarta monolito por la planificación a futuro y microservicios por la complejidad inicial"".
+",,Definir el Patrón de Arquitectura Global,,
+"1211805052615650",2025-10-31,,2025-11-07,Diseño de la Base de Datos,Diseño de Arquitectura y Sistema,,,,,,"    Descripción: Consiste en planificar la estructura donde se almacenarán todos los datos de la aplicación (usuarios, productos, pedidos, etc.). Un buen diseño es crucial para el rendimiento y la integridad de los datos.
+    Qué hay que hacer:
+        Crear un Modelo Entidad-Relación (ERD) que muestre las tablas y cómo se relacionan entre sí.
+        Definir cada campo de cada tabla (nombre, tipo de dato, si es obligatorio, etc.).
+    Ejemplo (Tienda Online ""Arte en Tela""): Se diseña una tabla Productos (con campos como id, nombre, descripción, precio, imagen_url) y una tabla Usuarios (con id, email, password_hash). Se establece una relación de ""muchos a muchos"" entre Pedidos y Productos.
+",Aplicación Web,,,
+"1211805052615651",2025-10-31,,2025-11-07,Crear el modelo Entidad-Relación (ER).,,,,,,,"    Descripción: Consiste en crear un diagrama visual que representa las ""entidades"" (tablas) de la base de datos y cómo se conectan entre sí (las ""relaciones"").
+    Qué hay que hacer: Usar una herramienta de diagramación (como Lucidchart, draw.io) para dibujar las tablas principales (ej. Usuarios, Productos, Pedidos) y las líneas que las conectan (ej. un ""Usuario"" tiene ""muchos"" ""Pedidos"").
+    Ejemplo (Tienda Online ""Arte en Tela""): Se dibuja un cuadro para Usuarios y otro para Pedidos. Se traza una línea entre ellos y se anota la relación ""1 a N"" (un usuario puede tener muchos pedidos).
+",,Diseño de la Base de Datos,,
+"1211805052615652",2025-10-31,,2025-11-07,Diseñar el esquema detallado de la base de datos.,,,,,,,"    Descripción: Consiste en traducir el diagrama visual (ERD) en una especificación técnica detallada para cada tabla.
+    Qué hay que hacer: Para cada tabla, listar todas sus columnas. Para cada columna, definir su nombre, tipo de dato (ej. VARCHAR(255), INTEGER, BOOLEAN), si puede ser nula, si es una clave primaria o foránea, etc.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se documenta para la tabla Productos:
+        id: SERIAL, PRIMARY KEY
+        name: VARCHAR(100), NOT NULL
+        price: DECIMAL(10, 2), NOT NULL
+        stock_quantity: INTEGER, DEFAULT 0
+",,Diseño de la Base de Datos,,
+"1211805052615653",2025-10-31,,2025-11-07,Diseño de la Lógica y Componentes del Backend,Diseño de Arquitectura y Sistema,,,,,,"    Descripción: Consiste en planificar la estructura del código del servidor. Se definen los principales módulos, servicios y la lógica de negocio que manejará las peticiones, procesará los datos y se comunicará con la base de datos.
+    Qué hay que hacer:
+        Diseñar la estructura de carpetas y archivos del proyecto backend.
+        Definir el ""contrato"" de la API (los endpoints, qué datos aceptan y qué devuelven).
+        Planificar cómo se manejará la autenticación y la autorización.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se define el endpoint POST /api/orders para crear un nuevo pedido. Se documenta que este endpoint requerirá un token de autenticación y recibirá un array de IDs de producto y cantidades.
+",Aplicación Web,,,
+"1211805052615654",2025-10-31,,2025-11-07,Diseño de UX/UI,Diseño de Arquitectura y Sistema,,,,,,"    Descripción: Consiste en crear la representación visual y el flujo de interacción de la aplicación. Primero se define la estructura y navegación (UX - Experiencia de Usuario) y luego el aspecto visual (UI - Interfaz de Usuario).
+    Qué hay que hacer:
+        UX: Crear wireframes (esquemas de bajo nivel) y flujos de usuario (ej. cómo un usuario va de la home a la compra finalizada).
+        UI: Diseñar mockups (diseños de alta fidelidad con colores, tipografías, etc.) y un prototipo interactivo.
+    Ejemplo (Tienda Online ""Arte en Tela""): El diseñador crea un wireframe del proceso de checkout en una sola página. Luego, diseña el mockup en Figma, aplicando la paleta de colores y la tipografía de la marca ""Arte en Tela"".
+",Aplicación Web,,,
+"1211805052615655",2025-10-31,,2025-11-07,Crear wireframes y flujos de usuario.,,,,,,,"    Descripción: Se centra en la estructura y funcionalidad, no en la estética. Un wireframe es un esquema de bajo nivel de una pantalla, y un flujo de usuario es un diagrama de cómo un usuario navega a través de ellas para completar una tarea.
+    Qué hay que hacer: Usar una herramienta de prototipado (como Balsamiq o Figma) para dibujar cajas y textos simples que representen los elementos de cada pantalla. Conectar estas pantallas para simular la navegación.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea un flujo que empieza en la ""Página de Producto"", va a la pantalla del ""Carrito de la Compra"" y termina en la pantalla de ""Confirmación de Pedido"", mostrando qué botones conectan cada paso.
+",,Diseño de UX/UI,,
+"1211805052615656",2025-10-31,,2025-11-07,Desarrollar mockups de alta fidelidad y prototipos interactivos.,,,,,,,"    Descripción: Consiste en tomar los wireframes y aplicarles el diseño visual final (colores, tipografías, iconografía, espaciado). Un prototipo interactivo permite hacer clic en los mockups para simular la experiencia real.
+    Qué hay que hacer: Utilizar una herramienta de diseño (como Figma, Sketch) para crear la versión final de cada pantalla. Conectar los elementos clicables (botones, enlaces) para crear un prototipo.
+    Ejemplo (Tienda Online ""Arte en Tela""): El diseñador aplica la paleta de colores de la marca, la tipografía elegida y las fotos de las camisetas a los wireframes. Luego, hace que al hacer clic en el botón ""Pagar"" en el mockup del carrito, se muestre el mockup de la página de pago.
+",,Diseño de UX/UI,,
+"1211805052615657",2025-10-31,,2025-11-07,Crear la guía de estilo visual.,,,,,,,"    Descripción: Es un documento que recopila todas las reglas del diseño visual para asegurar la consistencia en toda la aplicación.
+    Qué hay que hacer: Documentar los colores primarios y secundarios (con sus códigos hexadecimales), las familias tipográficas y sus tamaños para títulos y párrafos, el estilo de los botones en sus diferentes estados (normal, hover, disabled), etc.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea un documento que especifica: ""El color primario para los botones de acción es #3A86FF. El tipo de letra para los títulos es 'Montserrat Bold' a 32px. Los botones deben tener un border-radius de 8px"". Este documento es la ""biblia"" para los desarrolladores frontend.
+",,Diseño de UX/UI,,
+"1211805052615725",2025-10-31,,2025-11-07,Configuración de Entornos y Herramientas,Codificación y Desarrollo,,,,,,"    Descripción: Consiste en preparar toda la infraestructura técnica necesaria para que el equipo pueda empezar a escribir código de manera eficiente y colaborativa. Es el trabajo de cimentación del desarrollo.
+    Qué hay que hacer:
+        Inicializar los repositorios de código (ej. en GitHub o GitLab).
+        Configurar el entorno de desarrollo local (ej. usando Docker para que todos los desarrolladores tengan la misma configuración).
+        Establecer el pipeline de Integración Continua (CI/CD) para automatizar las pruebas y los despliegues.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea un repositorio para la API de Node.js y otro para la aplicación de React. Se configura GitHub Actions para que cada vez que se suba código a la rama develop, se ejecuten automáticamente las pruebas unitarias.
+",Aplicación Web,,,
+"1211805052615726",2025-10-31,,2025-11-07,Desarrollo del Backend,Codificación y Desarrollo,,,,,,"    Descripción: Es la fase de escritura del código del lado del servidor. Se implementa la lógica de negocio, la API y la comunicación con la base de datos, basándose en los diseños definidos en la fase anterior.
+    Qué hay que hacer:
+        Escribir el código de los modelos de la base de datos.
+        Implementar los controladores y servicios que contienen la lógica.
+        Desarrollar los endpoints de la API (ej. para obtener productos, crear usuarios, procesar pedidos).
+        Integrar servicios de terceros (como la pasarela de pago Stripe).
+    Ejemplo (Tienda Online ""Arte en Tela""): Un desarrollador backend trabaja en la historia de usuario ""Procesar pago"". Escribe el código en Node.js que recibe los datos del pedido, se comunica con la API de Stripe para validar la tarjeta y crear el cargo, y si todo es correcto, guarda el pedido en la base de datos con estado ""Pagado"".
+
+Esta tarea es muy amplia y deberás crear nuevas subtareas más manejables, basadas en las historias de usuario que ya definiste. Estas subtareas deben ser acciones concretas como:
+    Implementar sistema de autenticación (Registro y Login)
+    Desarrollar API para CRUD de Productos
+    Desarrollar API para el Carrito de la compra
+    Implementar integración con la API de Stripe
+",Aplicación Web,,,
+"1211805052615727",2025-10-31,,2025-11-07,Desarrollo del Frontend,Codificación y Desarrollo,,,,,,"⚠️ Bloqueada por: https://app.asana.com/1/1199172843445479/task/1211805052615654 https://app.asana.com/1/1199172843445479/task/1211805052615653
+
+    Descripción: Es la fase de escritura del código del lado del cliente, lo que el usuario ve y con lo que interactúa en su navegador. Se traducen los diseños visuales (mockups) en componentes de software funcionales.
+    Qué hay que hacer:
+        Maquetar las vistas de la aplicación usando HTML y CSS.
+        Crear componentes reutilizables (ej. un botón, una tarjeta de producto).
+        Implementar la lógica para obtener datos de la API del backend y mostrarlos en la interfaz.
+        Gestionar el estado de la aplicación (ej. qué hay en el carrito de la compra).
+    Ejemplo (Tienda Online ""Arte en Tela""): Un desarrollador frontend usa React para crear el componente ShoppingCart. Este componente hace una llamada a la API (GET /api/cart) para obtener los productos del carrito, los muestra en una lista y permite al usuario modificar las cantidades o eliminar productos.
+
+Esta tarea es muy amplia y deberás crear nuevas subtareas más manejables, basadas en las historias de usuario que ya definiste. Estas subtareas deben ser acciones concretas como:
+    Crear componentes de la página de inicio
+    Maquetar y conectar la vista de catálogo de productos
+    Desarrollar la lógica del carrito de la compra
+",Aplicación Web,,,
+"1211805052615728",2025-10-31,,2025-11-07,Implementación de Pruebas Unitarias y de Integración,Codificación y Desarrollo,,,,,,"    Descripción: Es una tarea de desarrollo continuo que consiste en escribir código para probar otro código. Las pruebas unitarias verifican pequeñas piezas de lógica de forma aislada, mientras que las de integración comprueban que varias partes del sistema funcionan bien juntas.
+    Qué hay que hacer:
+        Unitarias: Por cada función importante, escribir una prueba que verifique su comportamiento con diferentes entradas.
+        Integración: Escribir pruebas que simulen una acción completa, como registrar un usuario y comprobar que se ha guardado correctamente en la base de datos.
+    Ejemplo (Tienda Online ""Arte en Tela""): El desarrollador backend escribe una prueba unitaria para la función que calcula el precio total de un carrito, asegurándose de que aplica los descuentos correctamente. Luego, escribe una prueba de integración que simula una llamada a la API para añadir un producto al carrito y verifica que la respuesta de la API y el estado de la base de datos son los correctos.
+",Aplicación Web,,,
+"1211805052615730",2025-10-31,,2025-11-07,Ejecución de Plan de Pruebas,Pruebas y Aseguramiento de la Calidad (QA),,,,,,"⚠️ Bloqueada por: https://app.asana.com/1/1199172843445479/task/1211805052615727 https://app.asana.com/1/1199172843445479/task/1211805052615726
+
+    Descripción: Esta fase la suele llevar a cabo un rol de QA (Quality Assurance) o los propios desarrolladores. Consiste en probar la aplicación de forma manual o automatizada desde el punto de vista del usuario final para encontrar errores (bugs) antes del lanzamiento.
+    Qué hay que hacer:
+        Diseñar casos de prueba basados en las historias de usuario.
+        Ejecutar pruebas funcionales de extremo a extremo (end-to-end), simulando flujos de usuario completos.
+        Realizar pruebas de rendimiento (carga, estrés) y de seguridad (búsqueda de vulnerabilidades).
+    Ejemplo (Tienda Online ""Arte en Tela""): Un tester sigue un caso de prueba: 1. Navegar a la home. 2. Buscar una camiseta. 3. Añadirla al carrito. 4. Ir al checkout. 5. Pagar con una tarjeta de prueba. 6. Verificar que recibe un correo de confirmación. Si algún paso falla, lo documenta como un bug.
+",Aplicación Web,,,
+"1211805052615731",2025-10-31,,2025-11-07,Realizar pruebas funcionales end-to-end.,,,,,,,"    Descripción: Consiste en probar flujos de usuario completos de principio a fin, imitando cómo un usuario real interactuaría con la aplicación.
+    Qué hay que hacer: Escribir casos de prueba para los flujos más críticos (ej. registro, inicio de sesión, búsqueda de producto, proceso de compra). Ejecutar estos casos de prueba manualmente o con herramientas de automatización (como Cypress, Selenium).
+    Ejemplo (Tienda Online ""Arte en Tela""): El caso de prueba es: 1. Ir a la URL. 2. Añadir dos camisetas diferentes al carrito. 3. Introducir un código de descuento. 4. Completar el formulario de pago con datos de prueba. 5. Verificar que se llega a la página de ""Gracias por tu compra"".
+",,Ejecución de Plan de Pruebas,,
+"1211805052615732",2025-10-31,,2025-11-07,Realizar pruebas de rendimiento y carga.,,,,,,,"    Descripción: Consiste en medir cómo se comporta la aplicación bajo condiciones de estrés para asegurar que cumple con los requisitos no funcionales de rendimiento.
+    Qué hay que hacer: Utilizar herramientas (como JMeter, k6) para simular que muchos usuarios acceden a la aplicación simultáneamente (prueba de carga). Medir los tiempos de respuesta del servidor y detectar cuellos de botella.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se configura una prueba que simula 200 usuarios visitando la página de inicio y navegando por el catálogo durante 10 minutos. Se monitoriza si el tiempo de respuesta del servidor se mantiene por debajo de los 500ms definidos.
+",,Ejecución de Plan de Pruebas,,
+"1211805052615733",2025-10-31,,2025-11-07,Realizar pruebas de seguridad.,,,,,,,"    Descripción: Consiste en buscar activamente vulnerabilidades en la aplicación que podrían ser explotadas por atacantes.
+    Qué hay que hacer: Realizar análisis automáticos de vulnerabilidades con herramientas especializadas. Intentar realizar ataques comunes de forma manual, como Inyección SQL (intentar introducir comandos de base de datos en los formularios) o Cross-Site Scripting (XSS).
+    Ejemplo (Tienda Online ""Arte en Tela""): Un tester intenta registrarse con un email que contiene código malicioso (ej. <script>alert('XSS')</script>). Se verifica que la aplicación sanitiza correctamente la entrada y no ejecuta el script.
+",,Ejecución de Plan de Pruebas,,
+"1211805052615734",2025-10-31,,2025-11-07,Pruebas de Aceptación de Usuario (UAT),Pruebas y Aseguramiento de la Calidad (QA),,,,,,"⚠️ Bloqueada por: https://app.asana.com/1/1199172843445479/task/1211805052615730
+
+    Descripción: Es la fase final de pruebas donde los stakeholders o un grupo de usuarios finales reales utilizan la aplicación para validar que cumple con sus necesidades y los requisitos de negocio. Es la ""prueba de fuego"" antes del lanzamiento.
+    Qué hay que hacer:
+        Preparar un entorno de pruebas estable (Staging) con datos de ejemplo.
+        Organizar sesiones de prueba con los usuarios finales.
+        Recopilar su feedback, tanto errores como sugerencias de mejora.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se le da acceso al dueño de la tienda al entorno de Staging. Él mismo prueba a subir un nuevo producto, ponerlo en oferta y realizar un pedido de prueba para asegurarse de que todo funciona como esperaba.
+",Aplicación Web,,,
+"1211870068880057",2025-11-07,,2025-11-07,Preparar un entorno de pruebas estable,,,,,,,"    Descripción: Consiste en crear un entorno de pruebas estable, separado de producción, que sea una réplica lo más fiel posible del entorno real.
+    Qué hay que hacer: Desplegar la última versión candidata del software en un servidor de ""Staging"" o ""Pre-producción"". Cargar datos de prueba realistas (productos de ejemplo, usuarios falsos).
+    Ejemplo (Tienda Online ""Arte en Tela""): Se despliega la aplicación en la URL staging.arteentela.com. Se cargan 10 camisetas de ejemplo con sus fotos y precios, y se crean 5 cuentas de usuario falsas para que el cliente pueda probar.
+",,Pruebas de Aceptación de Usuario (UAT),,
+"1211870068880058",2025-11-07,,2025-11-07,Organizar sesiones de prueba,,,,,,,"    Descripción: Es el evento principal de la UAT. Los usuarios designados utilizan la aplicación para realizar sus tareas habituales.
+    Qué hay que hacer: Proporcionar a los testers una guía con los flujos que deben probar. Darles acceso al entorno de Staging. Observar cómo usan la aplicación si es posible.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se le envía un email al dueño de la tienda con el enlace al entorno de Staging y un listado de tareas: ""Por favor, intenta: 1. Crear una nueva camiseta. 2. Modificar el precio de una existente. 3. Realizar un pedido de prueba completo"".
+",,Pruebas de Aceptación de Usuario (UAT),,
+"1211870068880059",2025-11-07,,2025-11-07,Recopilar su feedback,,,,,,,"    Descripción: Consiste en recoger de forma estructurada todas las incidencias y sugerencias que surgen durante la UAT y decidir qué hacer con ellas.
+    Qué hay que hacer: Utilizar una herramienta (Asana, una hoja de cálculo) para que los testers reporten el feedback. Para cada punto, decidir si es un bug que debe ser corregido antes del lanzamiento, o una mejora que se puede añadir al backlog para el futuro.
+    Ejemplo (Tienda Online ""Arte en Tela""): El cliente reporta: ""El botón para guardar los cambios en un producto debería ser verde, no azul"". El equipo lo clasifica como una mejora de baja prioridad y lo añade al backlog para la v1.1. Luego reporta: ""Al cambiar el precio, el sistema no me deja usar decimales"". Esto se clasifica como un bug bloqueante y se asigna para corrección inmediata.
+",,Pruebas de Aceptación de Usuario (UAT),,
+"1211805052615735",2025-10-31,,2025-11-07,Gestión y Corrección de Errores (Bug Tracking),Pruebas y Aseguramiento de la Calidad (QA),,,,,,"    Descripción: Consiste en el proceso organizado de reportar, priorizar, asignar y solucionar los errores encontrados durante las fases de pruebas.
+    Qué hay que hacer:
+        Utilizar una herramienta (como Asana, Jira o GitHub Issues) para registrar cada bug con una descripción clara, pasos para reproducirlo y su severidad (crítico, alto, medio, bajo).
+        El jefe de proyecto o líder técnico prioriza qué bugs deben arreglarse primero.
+        Se asigna el bug a un desarrollador para que lo solucione.
+    Ejemplo (Tienda Online ""Arte en Tela""): El tester reporta un bug: ""El contador del carrito no se actualiza si se añade el mismo producto dos veces"". Le asigna una severidad ""Alta"". El líder técnico lo asigna al desarrollador frontend, quien lo corrige y lo marca como ""Listo para verificar"".
+",Aplicación Web,,,
+"1211805052615737",2025-10-31,,2025-11-07,Preparación del Entorno de Producción,Implantación y Despliegue,,,,,,"    Descripción: Consiste en configurar la infraestructura final donde se ejecutará la aplicación real para los clientes. Debe ser un entorno seguro, escalable y monitorizado.
+    Qué hay que hacer:
+        Configurar los servidores o servicios en la nube (ej. AWS, Vercel).
+        Configurar la base de datos de producción.
+        Configurar el dominio (ej. www.arteentela.com) y los certificados de seguridad SSL.
+    Ejemplo (Tienda Online ""Arte en Tela""): El ingeniero de DevOps configura una base de datos PostgreSQL en AWS RDS y un servicio de hosting para la API de Node.js en Heroku. Compra el dominio y configura un certificado SSL para que el tráfico sea HTTPS.
+",Aplicación Web,,,
+"1211805052615738",2025-10-31,,2025-11-07,Ejecución del Plan de Despliegue,Implantación y Despliegue,,,,,,"⚠️ Bloqueada por: https://app.asana.com/1/1199172843445479/task/1211805052615734
+
+    Descripción: Es el acto de ""pulsar el botón"" para lanzar la aplicación. Consiste en llevar el código de la versión final y estable desde los repositorios al entorno de producción para que sea accesible al público.
+    Qué hay que hacer:
+        Ejecutar los scripts de despliegue (preferiblemente de forma automatizada).
+        Realizar las migraciones de la base de datos a producción.
+        Hacer una última comprobación rápida en el entorno real para asegurar que todo funciona.
+    Ejemplo (Tienda Online ""Arte en Tela""): El equipo fusiona la rama develop en la rama main. Esto dispara automáticamente el pipeline de CI/CD, que ejecuta las pruebas una última vez y, si pasan, despliega el código del backend en Heroku y el del frontend en Vercel.
+",Aplicación Web,,,
+"1211805052615739",2025-10-31,,2025-11-07,Monitoreo Post-Lanzamiento Inmediato,Implantación y Despliegue,,,,,,"    Descripción: Una vez lanzada la aplicación, el trabajo no ha terminado. Durante las primeras horas y días, el equipo debe vigilar de cerca el comportamiento del sistema para detectar y solucionar problemas imprevistos rápidamente.
+    Qué hay que hacer:
+        Revisar los logs del servidor en busca de errores.
+        Monitorizar el consumo de CPU y memoria de los servidores.
+        Utilizar herramientas de seguimiento de errores para capturar cualquier fallo que experimenten los usuarios en tiempo real.
+    Ejemplo (Tienda Online ""Arte en Tela""): El equipo utiliza un servicio como Sentry. A los 10 minutos del lanzamiento, Sentry reporta un error que ocurre solo a los usuarios que usan el navegador Safari. El equipo lo identifica y despliega un parche (hotfix) rápidamente.
+",Aplicación Web,,,
+"1211805052615741",2025-10-31,,2025-11-07,Soporte y Gestión de Incidencias,Mantenimiento y Operaciones,,,,,,"    Descripción: Es el proceso continuo de recibir, registrar y resolver los problemas o dudas que reportan los usuarios una vez que la aplicación ya está en funcionamiento.
+    Qué hay que hacer:
+        Establecer un canal para que los usuarios reporten problemas (ej. un formulario de contacto o un email de soporte).
+        Clasificar los reportes (¿es un bug, una duda, una sugerencia?).
+        Gestionar la comunicación con el usuario.
+    Ejemplo (Tienda Online ""Arte en Tela""): Un cliente escribe al email de soporte diciendo que no puede completar su pago. El equipo de soporte investiga y descubre que su banco está rechazando la transacción. Le informan al cliente y cierran la incidencia.
+",Aplicación Web,,,
+"1211805052615742",2025-10-31,,2025-11-07,Mantenimiento Correctivo (solución de bugs),Mantenimiento y Operaciones,,,,,,"    Descripción: Consiste en solucionar los errores de software que no se encontraron antes del lanzamiento y que se descubren con el uso diario de la aplicación.
+    Qué hay que hacer:
+        Reproducir el bug reportado por un usuario o detectado por los sistemas de monitoreo.
+        Desarrollar una corrección para el bug.
+        Desplegar la corrección en producción (generalmente en ""releases de parches"").
+    Ejemplo (Tienda Online ""Arte en Tela""): Varios usuarios reportan que al usar un código de descuento, el precio final se calcula mal. El equipo identifica el error en la lógica de cálculo, lo corrige, y despliega la versión 1.0.1 con la solución.
+",Aplicación Web,,,
+"1211805052615743",2025-10-31,,2025-11-07,Mantenimiento Evolutivo (planificación y desarrollo de nuevas funcionalidades),Mantenimiento y Operaciones,,,,,,"    Descripción: Es el trabajo de mejorar la aplicación y añadirle nuevas características basadas en el feedback de los usuarios y los nuevos objetivos de negocio. Es lo que hace que el software siga vivo y creciendo.
+    Qué hay que hacer:
+        Recoger y priorizar las solicitudes de nuevas funcionalidades (el ""backlog"" de producto).
+        Planificar el desarrollo de la siguiente versión (v1.1 o v2.0).
+        Repetir el ciclo de desarrollo (diseño, codificación, pruebas) para las nuevas características.
+    Ejemplo (Tienda Online ""Arte en Tela""): Después de un mes, el dueño de la tienda pide implementar el sistema de reseñas de clientes, una de las funcionalidades que se excluyeron del MVP. El equipo la planifica para la versión 1.1, que se lanzará el próximo trimestre.
+",Aplicación Web,,,
+"1211805052615745",2025-10-31,,2025-11-07,Elaboración de la Documentación Técnica,Documentación,,,,,,"    Descripción: Consiste en crear y mantener los documentos que explican cómo está construido el software. Es vital para el mantenimiento a largo plazo y para que nuevos desarrolladores puedan unirse al proyecto.
+    Qué hay que hacer:
+        Documentar la arquitectura, las decisiones de diseño importantes y la configuración de los entornos.
+        Mantener actualizada la documentación de la API.
+        Comentar el código de forma clara.
+    Ejemplo (Tienda Online ""Arte en Tela""): Un desarrollador añade un nuevo endpoint a la API para buscar productos. Actualiza el documento de Swagger/OpenAPI con la información del nuevo endpoint, incluyendo los parámetros que acepta y el formato de la respuesta.
+",Aplicación Web,,,
+"1211805052615746",2025-10-31,,2025-11-07,Documentar la arquitectura del sistema y las decisiones de diseño.,,,,,,,"    Descripción: Consiste en mantener un documento vivo que explique la estructura de alto nivel del software y las razones detrás de las decisiones técnicas importantes.
+    Qué hay que hacer: Utilizar diagramas para ilustrar la arquitectura. Escribir resúmenes de por qué se eligió una base de datos específica, un framework concreto o un proveedor de servicios en la nube.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea una página en la wiki del proyecto con un diagrama que muestra cómo el frontend en React se comunica con la API en Node.js, y esta a su vez con la base de datos PostgreSQL y la API de Stripe.
+",,Elaboración de la Documentación Técnica,,
+"1211805052615747",2025-10-31,,2025-11-07,"Documentar el código (comentarios, READMEs de módulos).",,,,,,,"    Descripción: Es la práctica de escribir explicaciones dentro del propio código fuente y en archivos de texto (README.md) para que otros desarrolladores (o tu ""yo"" del futuro) puedan entenderlo fácilmente.
+    Qué hay que hacer: Añadir comentarios a las funciones complejas explicando su propósito. Crear un archivo README.md en la raíz de cada repositorio explicando cómo instalar y ejecutar el proyecto localmente.
+    Ejemplo (Tienda Online ""Arte en Tela""): En la función que calcula los costes de envío, el desarrollador añade un comentario: // Esta función calcula el coste basado en el peso total del pedido, aplicando la tarifa plana si supera los 50€.
+",,Elaboración de la Documentación Técnica,,
+"1211805052615748",2025-10-31,,2025-11-07,Crear y mantener la documentación de la API (si aplica).,,,,,,,"    Descripción: Si la arquitectura incluye una API, es crucial tener una documentación clara que sirva como manual de instrucciones para quienes la van a consumir (el equipo de frontend, apps móviles, etc.).
+    Qué hay que hacer: Utilizar un estándar como OpenAPI (Swagger) para definir cada endpoint. Especificar la URL, el método HTTP, los parámetros requeridos y el formato exacto de la respuesta que devolverá.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se documenta el endpoint GET /api/products/{id}. Se especifica que {id} debe ser un número entero y que la respuesta será un objeto JSON con los campos id, name, price, etc.
+",,Elaboración de la Documentación Técnica,,
+"1211805052615749",2025-10-31,,2025-11-07,Redactar guías de instalación y despliegue.,,,,,,,"    Descripción: Consiste en crear un documento paso a paso que explique cómo un nuevo desarrollador puede configurar el proyecto en su máquina o cómo se debe desplegar una nueva versión en los servidores.
+    Qué hay que hacer: Listar los prerrequisitos de software (ej. Node.js v18, Docker). Detallar los comandos exactos que se deben ejecutar para instalar dependencias, iniciar la aplicación y desplegarla.
+    Ejemplo (Tienda Online ""Arte en Tela""): En el README.md se incluye una sección ""Despliegue"" con los pasos: 1. Ejecutar 'npm run build'. 2. Subir el contenido de la carpeta 'build' al servidor web. 3. Reiniciar el servidor.
+",,Elaboración de la Documentación Técnica,,
+"1211805052615750",2025-10-31,,2025-11-07,Creación de Manuales de Usuario y Guías,Documentación,,,,,,"    Descripción: Consiste en crear contenido para ayudar a los usuarios finales a entender cómo usar la aplicación. Aunque una buena UX es clave, la documentación es esencial para funcionalidades complejas.
+    Qué hay que hacer:
+        Redactar una sección de Preguntas Frecuentes (FAQ).
+        Crear guías paso a paso para tareas clave (ej. cómo gestionar productos en el panel de administración).
+    Ejemplo (Tienda Online ""Arte en Tela""): El equipo redacta una guía en PDF para el administrador de la tienda, explicando paso a paso cómo subir un nuevo diseño de camiseta, establecer su precio y gestionar el stock desde el panel de administración.
+",Aplicación Web,,,
+"1211805052615751",2025-10-31,,2025-11-07,Redactar el manual de usuario principal.,,,,,,,"    Descripción: Es un documento completo dirigido a un rol de usuario específico que explica en detalle todas las funcionalidades a las que tiene acceso.
+    Qué hay que hacer: Estructurar el documento por secciones, correspondiendo a las diferentes partes de la aplicación. Usar capturas de pantalla para ilustrar las explicaciones.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea un ""Manual del Administrador de la Tienda"". Un capítulo se titula ""Gestión de Pedidos"" y explica cómo ver los nuevos pedidos, marcarlos como ""enviados"" e imprimir la factura.
+",,Creación de Manuales de Usuario y Guías,,
+"1211805052615752",2025-10-31,,2025-11-07,"Crear guías rápidas (""Quick Start Guides"") para nuevos usuarios.",,,,,,,"    Descripción: Son documentos cortos y muy visuales centrados en ayudar a un nuevo usuario a realizar las 2 o 3 acciones más importantes para empezar a usar la aplicación.
+    Qué hay que hacer: Identificar las tareas más comunes. Crear un documento de una sola página o un tour guiado dentro de la propia aplicación. Usar muchos gráficos y poco texto.
+    Ejemplo (Tienda Online ""Arte en Tela""): Para el administrador, se crea una guía rápida llamada ""Tus primeros 3 pasos"", que explica: 1. Cómo subir tu primera camiseta. 2. Cómo establecer su precio. 3. Cómo ver tu tienda pública.
+",,Creación de Manuales de Usuario y Guías,,
+"1211805052615753",2025-10-31,,2025-11-07,Desarrollar la sección de Preguntas Frecuentes (FAQ).,,,,,,,"    Descripción: Consiste en recopilar las dudas más comunes de los usuarios y proporcionar respuestas claras y concisas en una sección pública de la web.
+    Qué hay que hacer: Anticipar las preguntas que los usuarios podrían tener. Recopilar las preguntas reales que lleguen al canal de soporte tras el lanzamiento. Redactar respuestas breves y fáciles de entender.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se crea una sección de FAQ en la tienda con preguntas como: ""¿Cuáles son los métodos de pago aceptados?"", ""¿Cuánto tardan los envíos?"", ""¿Cómo puedo hacer una devolución?"".
+",,Creación de Manuales de Usuario y Guías,,
+"1211805052615754",2025-10-31,,2025-11-07,Preparar materiales de formación para los diferentes roles de usuario.,,,,,,,"    Descripción: Si la aplicación es compleja y va a ser usada por un equipo, puede ser necesario preparar materiales para una sesión de formación (training).
+    Qué hay que hacer: Crear una presentación de diapositivas (PowerPoint, Google Slides). Preparar un guion para una sesión de formación en vivo o grabada. Crear ejercicios prácticos.
+    Ejemplo (Tienda Online ""Arte en Tela""): Se prepara una presentación de 30 minutos para el dueño de la tienda y su equipo. Se explica en vivo cómo funciona el panel de administración y se les pide que realicen un pedido de prueba como ejercicio práctico.
+",,Creación de Manuales de Usuario y Guías,,

@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 12px;
+  max-width: 1100px;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box {
+  background: #cddff1;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+
+.center {
+  grid-column: 3 / 5; 
+  grid-row: 2 / 4;    
+  background: rgb(204, 225, 237);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.highlight {
+  font-size: 30px;
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+/* Primera fila */
+.thunderbolt { 
+  grid-column: 1 / 2; grid-row: 1 / 2; 
+}
+.cpu20 { 
+  grid-column: 2 / 3; grid-row: 1 / 2; 
+}
+.gpu30 { 
+  grid-column: 3 / 4; grid-row: 1 / 2; 
+}
+.watt { 
+  grid-column: 4 / 5; grid-row: 1 / 2; 
+}
+.memory96 { 
+  grid-column: 5 / 7; grid-row: 1 / 2; 
+}
+
+/* Segunda fila */
+.transistors { 
+  grid-column: 1 / 3; grid-row: 2 / 3; 
+}
+.cpu12 { 
+  grid-column: 5 / 6; grid-row: 2 / 4; 
+}
+
+/* Tercera fila */
+.neural { 
+  grid-column: 1 / 2; grid-row: 3 / 4; 
+}
+.neural40 { 
+  grid-column: 2 / 3; grid-row: 3 / 4; 
+}
+.gpu38 { 
+  grid-column: 6 / 6; grid-row: 2 / 4; 
+}
+
+/* Cuarta fila */
+.media { 
+  grid-column: 1 / 3; grid-row: 4 / 5; 
+}
+.tech5nm { 
+  grid-column: 3 / 5; grid-row: 4 / 5; 
+}
+.bandwidth { 
+  grid-column: 5 / 7; grid-row: 4 / 5; 
+}
+

@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    background-color: rgb(1, 90, 163);
+    justify-content: center;
+}
+nav img {
+    width: 140px;
+    height: 50px;
+    margin-right: 70px;
+    object-fit: cover;
+}
+nav ul {
+display: flex;    
+list-style: none;
+gap: 30px;
+}
+nav li {
+color: white;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%; 
+    max-width: 1200px; 
+    background-color: rgb(245, 245, 245);
+    margin: 0 auto; 
+}
+
+
+.h1-consultaPrecio{
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+.h2-precioLuz{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main section{
+    
+    box-shadow: 0 4px 20px rgba(0 , 0 , 0 , 0.17);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    
+}
+.grafica1{
+    width: 90%;
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+}
+.p-intervaloHora{
+    color: rgb(0, 255, 8);
+}
+.div-intervaloHora{
+    text-align: center;
+}
+
+.section-estadisticas{
+    display: flex;
+    box-shadow: 0 4px 20px rgba(0 , 0 , 0 , 0.17);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    justify-content: space-between;
+}
+.div-estadisticas{
+    box-shadow: 0 4px 20px rgba(0 , 0 , 0 , 0.30);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    width: 25%;
+}
+.div-estadisticas div{
+    text-align: center;
+}
+
+.fila-hora {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    border-radius: 5px;
+    margin: 2px 0;
+}
+
+.hora-verde {
+    background-color: rgb(76, 175, 79);
+}
+
+.hora-amarilla {
+    background-color: rgb(255, 193, 7);
+}
+
+.hora-roja {
+    background-color: rgb(244, 67, 54);
+}
+
+.hora-texto {
+    font-weight: 500;
+}
+
+.precio-texto {
+    font-weight: bold;
+}
+.precio_bajo{
+    color: rgb(0, 255, 0);
+}
+.alto{
+    color: red;
+}
+@media (max-width: 768px) {
+    /* Ajustes para la navegación */
+    nav {
+        /* Fuerza que el menú se envuelva debajo del logo si es necesario */
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+    nav img {
+        margin-bottom: 5px;
+    }
+    nav ul {
+        flex-direction: column; /* Apilar los ítems del menú */
+        align-items: flex-start;
+        width: 100%; /* Ocupar todo el ancho */
+        margin-top: 10px;
+        gap: 5px; /* Menor espacio entre ítems apilados */
+    }
+
+    /* Ajustes para las estadísticas: Apilar tarjetas */
+    .section-estadisticas {
+        flex-direction: column; 
+        gap: 15px; /* Espacio entre tarjetas apiladas */
+        margin-top: 20px; /* Reducir margen superior */
+        padding: 15px;
+    }
+    .div-estadisticas {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        min-width: 100%; 
+        padding: 15px;
+    }
+    
+    /* Ajustes para las gráficas */
+    .grafica1 {
+        min-height: 250px; 
+        padding: 15px;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,16 @@
+.contenedor{
+    border: 1px solid;
+    height: 200px;
+    width: 200px;
+    background-color: grey;
+
+    transition-property: background-color, height, width;
+    transition-duration: 2s;
+    transition-delay: 0ms, 1000ms, 2000ms;
+}
+.contenedor:hover{
+    background-color: green;
+    height: 300px;
+    width: 300px;
+    
+}

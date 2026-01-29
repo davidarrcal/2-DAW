@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+ <body>
+
+  <h1>Animaciones - soluciones</h1>
+  <p class="label">Cada bloque corresponde a un enunciado del ejercicio.</p>
+
+  <h2>1) Cuadro giratorio (200×100) — gira 360º en 3s y queda girado</h2>
+  <div class="demo-row">
+    <div class="box">
+      <div class="spin-once">GIRADO</div>
+      <div class="label">Animación: 3s, ease-in-out, fill-mode forwards.</div>
+    </div>
+  </div>
+
+  <h2>2) Desplazamiento por la pantalla — círculo azul (radio 100px)</h2>
+  <div class="demo-row">
+    <div class="box" style="width:100%;">
+      <div class="move-circle" aria-hidden="true"></div>
+      <div class="label">Círculo 200px diam. — animación 5s, inicio lento (ease-in)</div>
+    </div>
+  </div>
+
+  <h2>3) Rodando — rueda que rueda 1200px en 5s (radio 50px) </h2>
+  <div class="demo-row">
+    <div class="box rolling-wrap">
+      <div class="rolling" aria-hidden="true"></div>
+      <div class="label">Se ha sincronizado translateX(1200px) con rotate(1375deg)</div>
+    </div>
+  </div>
+
+  <h2>4) Zoom de un texto (h1) al pasar el ratón — 3s total, cambios lineales</h2>
+  <div class="demo-row">
+    <div class="box zoom">
+      <h1>Hover me</h1>
+      <div class="label">0→1s escala×2, 1→2s escala 25%, 2→3s vuelve a 100%</div>
+    </div>
+  </div>
+
+  <h2>5) Cambios de color — cuadrado 300px (rojo → rosa → azul)</h2>
+  <div class="demo-row">
+    <div class="box">
+      <div class="color-change"></div>
+      <div class="label">5s, alternate, 4 repeticiones</div>
+    </div>
+  </div>
+
+  <h2>6) Pantalla de scaneo — banda vertical blanca que se desplaza</h2>
+  <div class="demo-row">
+    <div class="box">
+      <div class="scan" title="Pasa el ratón para pausar"></div>
+      <div class="label">Ciclo completo 3s (1.5s cada sentido). Pause on :hover.</div>
+    </div>
+  </div>
+
+  <h2>7) Giros en 3D a dos caras (400×400)</h2>
+  <div class="demo-row">
+    <div class="box flip-container">
+      <div class="flip-card" aria-hidden="true">
+        <div class="face front">Frontal</div>
+        <div class="face back">Posterior</div>
+      </div>
+      <div class="label">Animación automática: rota 180º en 1.8s con perspectiva.</div>
+    </div>
+  </div>
+
+  <h2>8) Puertas giratorias — 4 puertas 100×175 (cristal)</h2>
+  <div class="demo-row">
+    <div class="box doors-wrap" style="background:transparent;">
+      <div class="door">1</div>
+      <div class="door">2</div>
+      <div class="door">3</div>
+      <div class="door">4</div>
+    </div>
+    <div class="label">Cada vuelta dura 2s; comienza 2s después de cargar la página.</div>
+  </div>
+
+  <h2>9) Tarjeta que se pone en pie — 3 bloques</h2>
+  <div class="demo-row">
+    <div class="box">
+      <div class="cards" title="Pasa el ratón por aquí">
+        <div class="card blue">A</div>
+        <div class="card green">B</div>
+        <div class="card brown">C</div>
+      </div>
+      <div class="label">Hover sobre el contenedor para activar: cada carta se pone vertical con 1s de intervalo.</div>
+    </div>
+  </div>
+
+  <h2>10) Tarjeta que se abre — 200×175, abre tras 1s y tarda 4s</h2>
+  <div class="demo-row">
+    <div class="box open-card-wrap">
+      <div class="open-card" aria-hidden="true">
+        <div class="content">Contenido interno</div>
+        <div class="cover">Portada</div>
+      </div>
+      <div class="label">La tapa (verde) empieza a abrir 1s tras mostrarse y tarda 4s.</div>
+    </div>
+  </div>
+
+<script>
+  /* Pequeño truco: forzar reflow en algunos navegadores para que las animaciones con delays empiecen correctamente */
+  window.addEventListener('load', function(){ document.body.offsetHeight; });
+</script>
+</body>
+</html>  
+</body>
+</html>

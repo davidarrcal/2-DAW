@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:10.6
+    container_name: prestashop-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=prestashop
+      - MYSQL_USER=prestashop
+      - MYSQL_PASSWORD=prestashop
+    volumes:
+      - ./db_data:/var/lib/mysql
+    networks:
+      - prestashop-net
+
+  prestashop:
+    image: prestashop/prestashop:8.2
+    container_name: prestashop-app
+    ports:
+      - "8080:80"
+    depends_on:
+      - mariadb
+    environment:
+      - PS_DOMAIN=localhost:8080
+      - DB_SERVER=mariadb
+      - DB_NAME=prestashop
+      - DB_USER=prestashop
+      - DB_PASSWD=prestashop
+      - PS_INSTALL_AUTO=0
+    volumes:
+      - ./html:/var/www/html # Esto creará la carpeta 'html' en tu escritorio con los archivos
+    networks:
+      - prestashop-net
+
+networks:
+  prestashop-net:

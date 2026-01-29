@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio MP3</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h1>Reproductor de Audio</h1>
+
+        <div class="reproductor-contenedor">
+            <div class="audio-wrapper">
+                <audio controls="controls" id="myAudio">
+                    <source id="audioSource" src="mp3/1.mp3" type="audio/mp3"/>
+                    Your browser does not support the <audio> element.
+                </audio>
+            </div>
+            
+            <div class="controles-contenedor">
+                <button onclick="previousAudio();"><img src="imagenes/flecha-izquierda.png" alt="previous">Previous</button>
+                <button onclick="playAudio();"><img src="imagenes/play.png" alt="play">Play</button>
+                <button onclick="pauseAudio();"><img src="imagenes/pause.png" alt="pause">Pause</button>
+                <button onclick="stopAudio();"><img src="imagenes/stop.png" alt="stop">Stop</button>
+                <button onclick="rewindAudio();"><img src="imagenes/rewind.png" alt="rewind">Rewind</button>
+                <button onclick="randomAudio();"><img src="imagenes/random.png" alt="random">Random</button>
+                <button onclick="nextAudio();"><img src="imagenes/flecha-derecha.png" alt="next">Next</button>
+            </div>
+        </div>
+
+        <div class="menu-contenedor"> 
+            <span class="menu-titulo">Audios
+                <ul class="sub-menu-Audios">
+                    <li><a href="javascript:seleccionarAudio('mp3/1.mp3');">Audio 1</a></li>
+                    <li><a href="javascript:seleccionarAudio('mp3/2.mp3');">Audio 2</a></li>
+                    <li><a href="javascript:seleccionarAudio('mp3/3.mp3');">Audio 3</a></li>
+                    <li><a href="javascript:seleccionarAudio('mp3/4.mp3');">Audio 4</a></li>
+                </ul>
+            </span> 
+        </div>
+    </div>
+
+    <script>
+        const theAudio = document.querySelector("#myAudio");
+        const audioSource = document.getElementById('audioSource');
+        
+        const audios = [
+            "mp3/1.mp3",
+            "mp3/2.mp3",
+            "mp3/3.mp3",
+            "mp3/4.mp3"
+        ];
+        
+        let currentAudioIndex = 0;
+
+        // FUNCIÓN Para cambiar audio de manera centralizada
+        function changeAudio(index) {
+            if (index >= 0 && index < audios.length) {
+                currentAudioIndex = index;
+                theAudio.pause();
+                audioSource.src = audios[currentAudioIndex];
+                theAudio.load();
+                theAudio.play();
+                console.log(`Reproduciendo: ${audios[currentAudioIndex]} (${currentAudioIndex + 1}/${audios.length})`);
+            }
+        }
+
+        // Funciones de control 
+        function playAudio() { 
+            theAudio.play(); 
+        }
+        
+        function pauseAudio() { 
+            theAudio.pause(); 
+        }
+        
+        function stopAudio() { 
+            theAudio.currentTime = 0; 
+            theAudio.pause(); 
+        }
+        
+        function rewindAudio() { 
+            theAudio.currentTime = 0; 
+        }
+        
+        function previousAudio(){
+            let newIndex = currentAudioIndex - 1;
+            if (newIndex < 0) {
+                newIndex = audios.length - 1;
+            }
+            changeAudio(newIndex);
+        }
+        
+        function nextAudio(){
+            let newIndex = currentAudioIndex + 1;
+            if (newIndex >= audios.length) {
+                newIndex = 0;
+            }
+            changeAudio(newIndex);
+        }
+
+        // Función de audio aleatorio
+        function randomAudio() {
+            const indiceAleatorio = Math.floor(Math.random() * audios.length);
+            changeAudio(indiceAleatorio);
+        }
+        
+        // Función para seleccionar audio desde el menú
+        function seleccionarAudio(rutaAudio) {
+            const index = audios.indexOf(rutaAudio);
+            if (index !== -1) {
+                changeAudio(index);
+            } else {
+                console.error("Audio no encontrado en la lista");
+            }
+        }
+        
+        // Inicializar con el primer audio
+        changeAudio(0);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    margin: 0px;
+    padding: 0px; 
+}
+
+
+/* Centra el título principal en la parte superior */
+.caja1 {
+    background-color: rgb(69, 68, 68);
+    width: 100%; /* Opcional, pero asegura que ocupa todo el ancho */
+    text-align: center; /* Centra el texto y elementos en línea dentro del div */
+    padding-top: 50px; /* Espacio superior para separarlo del borde de la ventana */
+    margin-bottom: 20px; /* Espacio inferior para separarlo del formulario */
+}
+
+.caja1 h1 {
+    font-size: 48px;
+    /* Elimina cualquier margen predeterminado que el <h1> pueda tener */
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255); /* Color base del texto */
+}
+
+.caja1 span {
+    color: #b20721; /* Aplica el color rojo a la parte "Us" */
+}
+.caja2{
+    display: flex;
+    background-color: rgb(69, 68, 68);
+    margin:40px;
+    padding: 20px;
+    place-items: center;
+    min-height: 100vh;
+}
+.formulario{
+    display: grid;
+    background-color: rgb(69, 68, 68);
+    width: 80%;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+}
