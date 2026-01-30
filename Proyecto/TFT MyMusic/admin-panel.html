@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - MyMusic's</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-music-note-beamed me-2"></i>MyMusic's
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">
+                            <i class="bi bi-search me-1"></i>Buscar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin-panel.html">
+                            <i class="bi bi-shield-check me-1"></i>Admin
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-shield-check me-1"></i>
+                            <span>Admin Sistema</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profile.html">
+                                <i class="bi bi-person me-2"></i>Mi Perfil
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="index.html">
+                                <i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-fluid fade-in">
+            <h2 class="mb-4"><i class="bi bi-shield-check me-2"></i>Panel de Administración</h2>
+
+            <!-- Stats Overview -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-people fs-2 mb-2"></i>
+                            <div class="stat-value">1,247</div>
+                            <div class="small">Total Usuarios</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-music-note-list fs-2 mb-2"></i>
+                            <div class="stat-value">5,823</div>
+                            <div class="small">Total Canciones</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-mic fs-2 mb-2"></i>
+                            <div class="stat-value">342</div>
+                            <div class="small">Artistas Activos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-chat-dots fs-2 mb-2"></i>
+                            <div class="stat-value">12,456</div>
+                            <div class="small">Comentarios</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <ul class="nav nav-tabs mb-4" id="adminTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" type="button">
+                        <i class="bi bi-people me-2"></i>Usuarios
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="content-tab" data-bs-toggle="tab" data-bs-target="#content" type="button">
+                        <i class="bi bi-music-note-list me-2"></i>Contenido
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reports-tab" data-bs-toggle="tab" data-bs-target="#reports" type="button">
+                        <i class="bi bi-flag me-2"></i>Reportes
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button">
+                        <i class="bi bi-gear me-2"></i>Configuración
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tabs Content -->
+            <div class="tab-content" id="adminTabsContent">
+                <!-- Users Tab -->
+                <div class="tab-pane fade show active" id="users" role="tabpanel">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0"><i class="bi bi-people me-2"></i>Gestión de Usuarios</h5>
+                            <div>
+                                <input type="text" class="form-control form-control-sm" placeholder="Buscar usuario..." style="width: 250px;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-dark table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Avatar</th>
+                                            <th>Nombre</th>
+                                            <th>Email</th>
+                                            <th>Tipo</th>
+                                            <th>Fecha Registro</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="https://i.pravatar.cc/150?img=1" alt="Luna Beats" 
+                                                     class="rounded-circle" style="width: 40px; height: 40px;">
+                                            </td>
+                                            <td>Luna Beats</td>
+                                            <td>luna@mymusics.com</td>
+                                            <td><span class="badge bg-primary">Artista</span></td>
+                                            <td>10/01/2024</td>
+                                            <td><span class="badge bg-success">Activo</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary" onclick="viewUser('artist1')">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-warning" onclick="suspendUser('artist1')">
+                                                    <i class="bi bi-pause-circle"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" onclick="deleteUser('artist1')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="https://i.pravatar.cc/150?img=12" alt="Carlos Música" 
+                                                     class="rounded-circle" style="width: 40px; height: 40px;">
+                                            </td>
+                                            <td>Carlos Música</td>
+                                            <td>carlos@mymusics.com</td>
+                                            <td><span class="badge bg-secondary">Oyente</span></td>
+                                            <td>15/01/2024</td>
+                                            <td><span class="badge bg-success">Activo</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary" onclick="viewUser('user1')">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-warning" onclick="suspendUser('user1')">
+                                                    <i class="bi bi-pause-circle"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" onclick="deleteUser('user1')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="https://i.pravatar.cc/150?img=33" alt="DJ Solar" 
+                                                     class="rounded-circle" style="width: 40px; height: 40px;">
+                                            </td>
+                                            <td>DJ Solar</td>
+                                            <td>djsolar@mymusics.com</td>
+                                            <td><span class="badge bg-primary">Artista</span></td>
+                                            <td>18/01/2024</td>
+                                            <td><span class="badge bg-success">Activo</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary" onclick="viewUser('artist2')">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-warning" onclick="suspendUser('artist2')">
+                                                    <i class="bi bi-pause-circle"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" onclick="deleteUser('artist2')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Pagination -->
+                            <nav class="mt-3">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <span class="page-link">Anterior</span>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Siguiente</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Tab -->
+                <div class="tab-pane fade" id="content" role="tabpanel">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0"><i class="bi bi-music-note-list me-2"></i>Gestión de Contenido</h5>
+                            <div>
+                                <input type="text" class="form-control form-control-sm" placeholder="Buscar canción..." style="width: 250px;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-dark table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Portada</th>
+                                            <th>Título</th>
+                                            <th>Artista</th>
+                                            <th>Género</th>
+                                            <th>Reproducciones</th>
+                                            <th>Fecha</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=50" 
+                                                     class="rounded" style="width: 50px; height: 50px; object-fit: cover;">
+                                            </td>
+                                            <td>Midnight Dreams</td>
+                                            <td>Luna Beats</td>
+                                            <td><span class="badge badge-purple">Electronic</span></td>
+                                            <td>45,678</td>
+                                            <td>15/01/2024</td>
+                                            <td><span class="badge bg-success">Publicado</span></td>
+                                            <td>
+                                                <a href="track-detail.html?id=1" class="btn btn-sm btn-outline-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <button class="btn btn-sm btn-outline-danger" onclick="deleteContent('1')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=50" 
+                                                     class="rounded" style="width: 50px; height: 50px; object-fit: cover;">
+                                            </td>
+                                            <td>Summer Vibes</td>
+                                            <td>DJ Solar</td>
+                                            <td><span class="badge badge-purple">Pop</span></td>
+                                            <td>23,456</td>
+                                            <td>20/01/2024</td>
+                                            <td><span class="badge bg-success">Publicado</span></td>
+                                            <td>
+                                                <a href="track-detail.html?id=2" class="btn btn-sm btn-outline-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <button class="btn btn-sm btn-outline-danger" onclick="deleteContent('2')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=50" 
+                                                     class="rounded" style="width: 50px; height: 50px; object-fit: cover;">
+                                            </td>
+                                            <td>Urban Rhythm</td>
+                                            <td>MC Flow</td>
+                                            <td><span class="badge badge-purple">Hip Hop</span></td>
+                                            <td>67,890</td>
+                                            <td>18/01/2024</td>
+                                            <td><span class="badge bg-success">Publicado</span></td>
+                                            <td>
+                                                <a href="track-detail.html?id=3" class="btn btn-sm btn-outline-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <button class="btn btn-sm btn-outline-danger" onclick="deleteContent('3')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reports Tab -->
+                <div class="tab-pane fade" id="reports" role="tabpanel">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="bi bi-flag me-2"></i>Reportes Pendientes</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-warning">
+                                <i class="bi bi-exclamation-triangle me-2"></i>
+                                <strong>5 reportes pendientes</strong> requieren tu atención
+                            </div>
+                            
+                            <div class="list-group">
+                                <div class="list-group-item bg-dark">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Contenido inapropiado</h6>
+                                        <small class="text-muted">Hace 2h</small>
+                                    </div>
+                                    <p class="mb-1 small">Usuario reportó la canción "Urban Rhythm" por contenido explícito no marcado.</p>
+                                    <div class="mt-2">
+                                        <button class="btn btn-sm btn-success me-2">Aprobar</button>
+                                        <button class="btn btn-sm btn-danger me-2">Rechazar</button>
+                                        <button class="btn btn-sm btn-outline-primary">Ver Detalles</button>
+                                    </div>
+                                </div>
+                                <div class="list-group-item bg-dark mt-2">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Violación de derechos de autor</h6>
+                                        <small class="text-muted">Hace 5h</small>
+                                    </div>
+                                    <p class="mb-1 small">Reporte de posible infracción de copyright en "Summer Vibes".</p>
+                                    <div class="mt-2">
+                                        <button class="btn btn-sm btn-success me-2">Aprobar</button>
+                                        <button class="btn btn-sm btn-danger me-2">Rechazar</button>
+                                        <button class="btn btn-sm btn-outline-primary">Ver Detalles</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="tab-pane fade" id="settings" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0"><i class="bi bi-gear me-2"></i>Configuración General</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Nombre de la Plataforma</label>
+                                        <input type="text" class="form-control" value="MyMusic's">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Email de Contacto</label>
+                                        <input type="email" class="form-control" value="contact@mymusics.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="allowRegistrations" checked>
+                                            <label class="form-check-label" for="allowRegistrations">
+                                                Permitir nuevos registros
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="maintenanceMode">
+                                            <label class="form-check-label" for="maintenanceMode">
+                                                Modo mantenimiento
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary">Guardar Cambios</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="mb-0"><i class="bi bi-currency-dollar me-2"></i>Configuración de Pagos</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Comisión de la Plataforma (%)</label>
+                                        <input type="number" class="form-control" value="15" min="0" max="100">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Precio Mínimo (USD)</label>
+                                        <input type="number" class="form-control" value="0.99" step="0.01">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Gateway de Pago</label>
+                                        <select class="form-select">
+                                            <option>Stripe</option>
+                                            <option>PayPal</option>
+                                            <option>Ambos</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-primary">Guardar Cambios</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+    
+    <script>
+        function viewUser(id) {
+            alert('Ver usuario ID: ' + id);
+        }
+
+        function suspendUser(id) {
+            if (confirm('¿Suspender este usuario?')) {
+                alert('Usuario suspendido (Demo)');
+            }
+        }
+
+        function deleteUser(id) {
+            if (confirm('¿Estás seguro de eliminar este usuario? Esta acción no se puede deshacer.')) {
+                alert('Usuario eliminado (Demo)');
+            }
+        }
+
+        function deleteContent(id) {
+            if (confirm('¿Eliminar este contenido?')) {
+                alert('Contenido eliminado (Demo)');
+            }
+        }
+    </script>
+</body>
+</html>

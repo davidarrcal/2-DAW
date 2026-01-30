@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - MyMusic's</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-music-note-beamed me-2"></i>MyMusic's
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">
+                            <i class="bi bi-search me-1"></i>Buscar
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle me-1"></i>
+                            <span>Carlos Música</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item active" href="profile.html">
+                                <i class="bi bi-person me-2"></i>Mi Perfil
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="index.html">
+                                <i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container fade-in">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <h2 class="mb-4"><i class="bi bi-person-circle me-2"></i>Mi Perfil</h2>
+
+                    <!-- Profile Card -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center py-5">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Carlos Música" class="user-avatar-lg mb-3">
+                            <h3>Carlos Música</h3>
+                            <p class="text-muted">carlos@mymusics.com</p>
+                            <span class="badge bg-secondary mb-3">
+                                <i class="bi bi-headphones me-1"></i>Oyente
+                            </span>
+                            <p class="mt-3">Amante de la música independiente y las nuevas propuestas electrónicas</p>
+                            
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                                <i class="bi bi-pencil me-2"></i>Editar Perfil
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tabs Navigation -->
+                    <ul class="nav nav-tabs mb-4" id="profileTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="liked-tab" data-bs-toggle="tab" data-bs-target="#liked" type="button">
+                                <i class="bi bi-heart-fill me-2"></i>Me Gusta (5)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="playlists-tab" data-bs-toggle="tab" data-bs-target="#playlists" type="button">
+                                <i class="bi bi-music-note-list me-2"></i>Mis Playlists (3)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="following-tab" data-bs-toggle="tab" data-bs-target="#following" type="button">
+                                <i class="bi bi-people me-2"></i>Siguiendo (8)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="history-tab" data-bs-toggle="tab" data-bs-target="#history" type="button">
+                                <i class="bi bi-clock-history me-2"></i>Historial
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tabs Content -->
+                    <div class="tab-content" id="profileTabsContent">
+                        <!-- Liked Tracks Tab -->
+                        <div class="tab-pane fade show active" id="liked" role="tabpanel">
+                            <div class="row g-4">
+                                <!-- Track 1 -->
+                                <div class="col-md-4">
+                                    <div class="card track-card" onclick="location.href='track-detail.html?id=1'">
+                                        <div class="position-relative">
+                                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400" 
+                                                 alt="Midnight Dreams" class="track-card-cover">
+                                            <div class="track-card-play">
+                                                <i class="bi bi-play-circle-fill"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6 class="card-title mb-1">Midnight Dreams</h6>
+                                            <p class="text-muted small mb-2">
+                                                <a href="artist-profile.html?id=artist1" class="text-decoration-none" onclick="event.stopPropagation()">Luna Beats</a>
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">
+                                                    <i class="bi bi-play-circle me-1"></i>45.7K
+                                                </small>
+                                                <small class="text-danger">
+                                                    <i class="bi bi-heart-fill me-1"></i>Me Gusta
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Track 2 -->
+                                <div class="col-md-4">
+                                    <div class="card track-card" onclick="location.href='track-detail.html?id=2'">
+                                        <div class="position-relative">
+                                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400" 
+                                                 alt="Summer Vibes" class="track-card-cover">
+                                            <div class="track-card-play">
+                                                <i class="bi bi-play-circle-fill"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6 class="card-title mb-1">Summer Vibes</h6>
+                                            <p class="text-muted small mb-2">
+                                                <a href="artist-profile.html?id=artist2" class="text-decoration-none" onclick="event.stopPropagation()">DJ Solar</a>
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">
+                                                    <i class="bi bi-play-circle me-1"></i>23.5K
+                                                </small>
+                                                <small class="text-danger">
+                                                    <i class="bi bi-heart-fill me-1"></i>Me Gusta
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Track 3 -->
+                                <div class="col-md-4">
+                                    <div class="card track-card" onclick="location.href='track-detail.html?id=6'">
+                                        <div class="position-relative">
+                                            <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=400" 
+                                                 alt="Jazz Evening" class="track-card-cover">
+                                            <div class="track-card-play">
+                                                <i class="bi bi-play-circle-fill"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6 class="card-title mb-1">Jazz Evening</h6>
+                                            <p class="text-muted small mb-2">
+                                                <a href="artist-profile.html?id=artist5" class="text-decoration-none" onclick="event.stopPropagation()">Smooth Trio</a>
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">
+                                                    <i class="bi bi-play-circle me-1"></i>12.3K
+                                                </small>
+                                                <small class="text-danger">
+                                                    <i class="bi bi-heart-fill me-1"></i>Me Gusta
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Playlists Tab -->
+                        <div class="tab-pane fade" id="playlists" role="tabpanel">
+                            <div class="row g-4">
+                                <!-- Playlist 1 -->
+                                <div class="col-md-4">
+                                    <div class="card" style="cursor: pointer;">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary rounded p-3 me-3">
+                                                    <i class="bi bi-music-note-list fs-3"></i>
+                                                </div>
+                                                <div>
+                                                    <h6 class="mb-0">Trabajo & Estudio</h6>
+                                                    <small class="text-muted">12 canciones</small>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex gap-2">
+                                                <button class="btn btn-sm btn-outline-primary flex-fill">
+                                                    <i class="bi bi-play-fill"></i> Reproducir
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-secondary">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Playlist 2 -->
+                                <div class="col-md-4">
+                                    <div class="card" style="cursor: pointer;">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-success rounded p-3 me-3">
+                                                    <i class="bi bi-music-note-list fs-3"></i>
+                                                </div>
+                                                <div>
+                                                    <h6 class="mb-0">Relax Time</h6>
+                                                    <small class="text-muted">8 canciones</small>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex gap-2">
+                                                <button class="btn btn-sm btn-outline-primary flex-fill">
+                                                    <i class="bi bi-play-fill"></i> Reproducir
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-secondary">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Playlist 3 -->
+                                <div class="col-md-4">
+                                    <div class="card" style="cursor: pointer;">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-warning rounded p-3 me-3">
+                                                    <i class="bi bi-music-note-list fs-3"></i>
+                                                </div>
+                                                <div>
+                                                    <h6 class="mb-0">Favoritos 2024</h6>
+                                                    <small class="text-muted">25 canciones</small>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex gap-2">
+                                                <button class="btn btn-sm btn-outline-primary flex-fill">
+                                                    <i class="bi bi-play-fill"></i> Reproducir
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-secondary">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button class="btn btn-primary" onclick="createPlaylist()">
+                                    <i class="bi bi-plus-circle me-2"></i>Crear Nueva Playlist
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Following Tab -->
+                        <div class="tab-pane fade" id="following" role="tabpanel">
+                            <div class="row g-4">
+                                <!-- Artist 1 -->
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <img src="https://i.pravatar.cc/150?img=1" alt="Luna Beats" 
+                                                     class="rounded-circle me-3" style="width: 60px; height: 60px;">
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">
+                                                        <a href="artist-profile.html?id=artist1" class="text-decoration-none">Luna Beats</a>
+                                                    </h6>
+                                                    <small class="text-muted">2 canciones · 2.8K seguidores</small>
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary">Siguiendo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Artist 2 -->
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <img src="https://i.pravatar.cc/150?img=33" alt="DJ Solar" 
+                                                     class="rounded-circle me-3" style="width: 60px; height: 60px;">
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">
+                                                        <a href="artist-profile.html?id=artist2" class="text-decoration-none">DJ Solar</a>
+                                                    </h6>
+                                                    <small class="text-muted">1 canción · 1.5K seguidores</small>
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary">Siguiendo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Artist 3 -->
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center">
+                                                <img src="https://i.pravatar.cc/150?img=45" alt="Smooth Trio" 
+                                                     class="rounded-circle me-3" style="width: 60px; height: 60px;">
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">
+                                                        <a href="artist-profile.html?id=artist5" class="text-decoration-none">Smooth Trio</a>
+                                                    </h6>
+                                                    <small class="text-muted">1 canción · 987 seguidores</small>
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary">Siguiendo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- History Tab -->
+                        <div class="tab-pane fade" id="history" role="tabpanel">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="mb-3">Escuchado Recientemente</h5>
+                                    
+                                    <!-- History Item 1 -->
+                                    <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
+                                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=60" 
+                                             alt="Track" class="rounded me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Midnight Dreams</h6>
+                                            <small class="text-muted">Luna Beats · Electronic</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted d-block">Hace 2h</small>
+                                            <button class="btn btn-sm btn-outline-primary mt-1">
+                                                <i class="bi bi-play-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- History Item 2 -->
+                                    <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
+                                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=60" 
+                                             alt="Track" class="rounded me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Summer Vibes</h6>
+                                            <small class="text-muted">DJ Solar · Pop</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted d-block">Hace 5h</small>
+                                            <button class="btn btn-sm btn-outline-primary mt-1">
+                                                <i class="bi bi-play-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- History Item 3 -->
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=60" 
+                                             alt="Track" class="rounded me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Jazz Evening</h6>
+                                            <small class="text-muted">Smooth Trio · Jazz</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted d-block">Ayer</small>
+                                            <button class="btn btn-sm btn-outline-primary mt-1">
+                                                <i class="bi bi-play-fill"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProfileForm" onsubmit="saveProfile(event)">
+                        <div class="text-center mb-4">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Avatar" class="user-avatar-lg mb-3">
+                            <div>
+                                <button type="button" class="btn btn-sm btn-outline-primary">Cambiar Foto</button>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" value="Carlos Música" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" value="carlos@mymusics.com" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Biografía</label>
+                            <textarea class="form-control" rows="3">Amante de la música independiente y las nuevas propuestas electrónicas</textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+    
+    <script>
+        function createPlaylist() {
+            const name = prompt('Nombre de la nueva playlist:');
+            if (name) {
+                showToast(`Playlist "${name}" creada exitosamente`, 'success');
+            }
+        }
+
+        function saveProfile(event) {
+            event.preventDefault();
+            showToast('Perfil actualizado correctamente', 'success');
+            const modal = bootstrap.Modal.getInstance(document.getElementById('editProfileModal'));
+            modal.hide();
+        }
+
+        function showToast(message, type = 'info') {
+            let toastContainer = document.getElementById('toastContainer');
+            if (!toastContainer) {
+                toastContainer = document.createElement('div');
+                toastContainer.id = 'toastContainer';
+                toastContainer.style.cssText = 'position: fixed; top: 80px; right: 20px; z-index: 9999;';
+                document.body.appendChild(toastContainer);
+            }
+
+            const toastId = 'toast_' + Date.now();
+            const bgClass = type === 'success' ? 'bg-success' : 
+                            type === 'danger' ? 'bg-danger' :
+                            type === 'warning' ? 'bg-warning' : 'bg-info';
+
+            const toastHTML = `
+                <div id="${toastId}" class="toast align-items-center text-white ${bgClass} border-0 mb-2" role="alert">
+                    <div class="d-flex">
+                        <div class="toast-body">${message}</div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                    </div>
+                </div>
+            `;
+
+            toastContainer.insertAdjacentHTML('beforeend', toastHTML);
+            
+            const toastElement = document.getElementById(toastId);
+            const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
+            toast.show();
+
+            toastElement.addEventListener('hidden.bs.toast', function() {
+                toastElement.remove();
+            });
+        }
+    </script>
+</body>
+</html>

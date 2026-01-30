@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Dreams - MyMusic's</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-music-note-beamed me-2"></i>MyMusic's
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">
+                            <i class="bi bi-search me-1"></i>Buscar
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center" id="navAuth">
+                    <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#authModal" onclick="setAuthMode('login')">
+                        Iniciar Sesión
+                    </button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authModal" onclick="setAuthMode('register')">
+                        Registrarse
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container fade-in">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <!-- Back Button -->
+                    <div class="mb-3">
+                        <a href="index.html" class="btn btn-outline-light btn-sm">
+                            <i class="bi bi-arrow-left me-2"></i>Volver
+                        </a>
+                    </div>
+
+                    <!-- Track Header -->
+                    <div class="card mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400" 
+                                     alt="Midnight Dreams" class="img-fluid" 
+                                     style="height: 100%; object-fit: cover; border-radius: 0.5rem 0 0 0.5rem;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2">Midnight Dreams</h2>
+                                    <p class="text-muted mb-3">
+                                        <a href="artist-profile.html?id=artist1" class="text-primary text-decoration-none">
+                                            <i class="bi bi-person-circle me-1"></i>Luna Beats
+                                        </a>
+                                    </p>
+                                    <div class="mb-3">
+                                        <span class="badge badge-purple me-2">Electronic</span>
+                                        <span class="badge bg-secondary">4:05</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <i class="bi bi-play-circle me-2"></i>45,678 reproducciones
+                                        <i class="bi bi-heart-fill ms-3 me-2 text-danger"></i>1,234 likes
+                                        <i class="bi bi-chat-dots ms-3 me-2"></i>23 comentarios
+                                    </div>
+                                    <div class="d-grid gap-2 mb-2">
+                                        <button class="btn btn-primary btn-lg" onclick="playTrack()">
+                                            <i class="bi bi-play-fill me-2"></i>Reproducir
+                                        </button>
+                                    </div>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-success w-100">
+                                                <i class="bi bi-cart me-2"></i>Comprar $2.99
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-light w-100" onclick="addToPlaylist()">
+                                                <i class="bi bi-plus-circle me-2"></i>Añadir a Playlist
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-2">
+                                        <button class="btn btn-outline-light flex-fill" onclick="likeTrack()">
+                                            <i class="bi bi-heart me-2"></i>Me Gusta
+                                        </button>
+                                        <button class="btn btn-outline-light flex-fill" onclick="shareTrack()">
+                                            <i class="bi bi-share me-2"></i>Compartir
+                                        </button>
+                                        <button class="btn btn-outline-light" onclick="downloadTrack()">
+                                            <i class="bi bi-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Track Description -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Descripción</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Una pieza electrónica envolvente que combina beats hipnóticos con melodías ambientales. Perfecta para esos momentos de concentración o relajación nocturna.</p>
+                            <p class="mb-0"><strong>Tags:</strong> 
+                                <span class="badge bg-secondary ms-2">chill</span>
+                                <span class="badge bg-secondary">ambient</span>
+                                <span class="badge bg-secondary">electronic</span>
+                                <span class="badge bg-secondary">night vibes</span>
+                            </p>
+                            <hr>
+                            <div class="row text-center">
+                                <div class="col">
+                                    <small class="text-muted">Publicado</small>
+                                    <div class="fw-bold">15 Ene 2024</div>
+                                </div>
+                                <div class="col">
+                                    <small class="text-muted">Duración</small>
+                                    <div class="fw-bold">4:05</div>
+                                </div>
+                                <div class="col">
+                                    <small class="text-muted">BPM</small>
+                                    <div class="fw-bold">120</div>
+                                </div>
+                                <div class="col">
+                                    <small class="text-muted">Licencia</small>
+                                    <div class="fw-bold">
+                                        <i class="bi bi-c-circle" title="Todos los derechos reservados"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Waveform Visualization -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center py-5">
+                            <i class="bi bi-soundwave fs-1 text-primary"></i>
+                            <p class="text-muted mt-3">Visualización de forma de onda</p>
+                            <div class="progress" style="height: 60px; background-color: var(--dark-hover);">
+                                <div class="progress-bar" role="progressbar" style="width: 0%; background: linear-gradient(90deg, var(--primary-purple) 0%, var(--primary-purple-light) 100%);" id="waveProgress"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="bi bi-chat-dots me-2"></i>Comentarios (23)</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Comment Form -->
+                            <div class="mb-4">
+                                <h6>Deja tu comentario</h6>
+                                <form onsubmit="addComment(event)">
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="3" placeholder="Escribe tu comentario..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-send me-2"></i>Comentar
+                                    </button>
+                                </form>
+                            </div>
+
+                            <hr>
+
+                            <!-- Comments List -->
+                            <div id="commentsList">
+                                <!-- Comment 1 -->
+                                <div class="comment-item">
+                                    <div class="d-flex">
+                                        <img src="https://i.pravatar.cc/150?img=12" alt="Carlos Música" 
+                                             class="comment-avatar me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="comment-author">Carlos Música</span>
+                                                <span class="comment-time">Hace 2h</span>
+                                            </div>
+                                            <p class="mb-2 mt-1">¡Increíble track! Me encanta la producción 🔥</p>
+                                            <div>
+                                                <button class="btn btn-sm btn-link text-muted p-0 me-3" onclick="likeComment(1)">
+                                                    <i class="bi bi-heart me-1"></i>15
+                                                </button>
+                                                <button class="btn btn-sm btn-link text-muted p-0" onclick="replyComment(1)">
+                                                    <i class="bi bi-reply me-1"></i>Responder
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Comment 2 -->
+                                <div class="comment-item">
+                                    <div class="d-flex">
+                                        <img src="https://i.pravatar.cc/150?img=33" alt="DJ Solar" 
+                                             class="comment-avatar me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="comment-author">DJ Solar</span>
+                                                <span class="comment-time">Hace 5h</span>
+                                            </div>
+                                            <p class="mb-2 mt-1">Excelente trabajo Luna! Gran inspiración para mis próximos beats</p>
+                                            <div>
+                                                <button class="btn btn-sm btn-link text-muted p-0 me-3" onclick="likeComment(2)">
+                                                    <i class="bi bi-heart me-1"></i>8
+                                                </button>
+                                                <button class="btn btn-sm btn-link text-muted p-0" onclick="replyComment(2)">
+                                                    <i class="bi bi-reply me-1"></i>Responder
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Comment 3 -->
+                                <div class="comment-item">
+                                    <div class="d-flex">
+                                        <img src="https://i.pravatar.cc/150?img=25" alt="Ana López" 
+                                             class="comment-avatar me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="comment-author">Ana López</span>
+                                                <span class="comment-time">Hace 1 día</span>
+                                            </div>
+                                            <p class="mb-2 mt-1">Perfecta para estudiar y concentrarse. ¡La tengo en repeat! ✨</p>
+                                            <div>
+                                                <button class="btn btn-sm btn-link text-muted p-0 me-3" onclick="likeComment(3)">
+                                                    <i class="bi bi-heart me-1"></i>22
+                                                </button>
+                                                <button class="btn btn-sm btn-link text-muted p-0" onclick="replyComment(3)">
+                                                    <i class="bi bi-reply me-1"></i>Responder
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Load More Button -->
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-outline-primary" onclick="loadMoreComments()">
+                                        Cargar más comentarios
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Tracks -->
+                    <div class="mt-4">
+                        <h4 class="mb-3"><i class="bi bi-music-note-list me-2"></i>Más de Luna Beats</h4>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card track-card" onclick="location.href='track-detail.html?id=4'">
+                                    <div class="position-relative">
+                                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400" 
+                                             alt="Acoustic Soul" class="track-card-cover">
+                                        <div class="track-card-play">
+                                            <i class="bi bi-play-circle-fill"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-1">Acoustic Soul</h6>
+                                        <p class="text-muted small mb-2">Luna Beats</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted">
+                                                <i class="bi bi-play-circle me-1"></i>34.6K
+                                            </small>
+                                            <small class="text-primary fw-bold">$2.49</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Auth Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="authModalTitle">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info">
+                        <p class="small mb-2">Inicia sesión para comentar, dar like y crear playlists</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-sm btn-primary" onclick="demoLogin('user')">
+                                <i class="bi bi-headphones me-2"></i>Acceso Demo
+                            </button>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Player (Fixed Bottom) -->
+    <div id="musicPlayer" class="music-player" style="display: none;">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3 d-flex align-items-center">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100" alt="Cover" class="player-cover me-3">
+                    <div>
+                        <div class="player-title">Midnight Dreams</div>
+                        <div class="player-artist">Luna Beats</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="player-controls text-center">
+                        <button class="btn btn-sm btn-link text-white">
+                            <i class="bi bi-skip-backward-fill"></i>
+                        </button>
+                        <button class="btn btn-sm btn-link text-white btn-play" onclick="togglePlayPlayer()">
+                            <i class="bi bi-pause-circle-fill fs-3"></i>
+                        </button>
+                        <button class="btn btn-sm btn-link text-white">
+                            <i class="bi bi-skip-forward-fill"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="player-progress mt-2">
+                        <span class="time-current" id="currentTimePlayer">0:00</span>
+                        <input type="range" class="form-range mx-2" value="0" min="0" max="100" id="progressRange">
+                        <span class="time-total">4:05</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 text-end">
+                    <button class="btn btn-sm btn-link text-white">
+                        <i class="bi bi-volume-up-fill"></i>
+                    </button>
+                    <input type="range" class="form-range d-inline-block ms-2" style="width: 100px;" value="70" min="0" max="100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+    
+    <script>
+        let isPlaying = false;
+        let currentTime = 0;
+
+        function playTrack() {
+            document.getElementById('musicPlayer').style.display = 'block';
+            isPlaying = true;
+            startProgress();
+            showToast('Reproduciendo: Midnight Dreams', 'success');
+        }
+
+        function togglePlayPlayer() {
+            isPlaying = !isPlaying;
+            const btn = document.querySelector('.btn-play i');
+            btn.className = isPlaying ? 'bi bi-pause-circle-fill fs-3' : 'bi bi-play-circle-fill fs-3';
+        }
+
+        function startProgress() {
+            const progressRange = document.getElementById('progressRange');
+            const waveProgress = document.getElementById('waveProgress');
+            const currentTimeEl = document.getElementById('currentTimePlayer');
+            
+            setInterval(() => {
+                if (isPlaying && currentTime < 245) {
+                    currentTime++;
+                    const progress = (currentTime / 245) * 100;
+                    progressRange.value = progress;
+                    waveProgress.style.width = progress + '%';
+                    
+                    const mins = Math.floor(currentTime / 60);
+                    const secs = currentTime % 60;
+                    currentTimeEl.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+                }
+            }, 1000);
+        }
+
+        function addToPlaylist() {
+            showToast('Añadido a tu playlist', 'success');
+        }
+
+        function likeTrack() {
+            showToast('¡Te gusta esta canción!', 'success');
+        }
+
+        function shareTrack() {
+            showToast('Enlace copiado al portapapeles', 'success');
+        }
+
+        function downloadTrack() {
+            showToast('Descargando... (Demo)', 'info');
+        }
+
+        function addComment(event) {
+            event.preventDefault();
+            showToast('Comentario publicado', 'success');
+            event.target.reset();
+        }
+
+        function likeComment(id) {
+            showToast('Like agregado al comentario', 'success');
+        }
+
+        function replyComment(id) {
+            showToast('Función de respuesta (Demo)', 'info');
+        }
+
+        function loadMoreComments() {
+            showToast('Cargando más comentarios...', 'info');
+        }
+
+        function showToast(message, type = 'info') {
+            // Create toast container if doesn't exist
+            let toastContainer = document.getElementById('toastContainer');
+            if (!toastContainer) {
+                toastContainer = document.createElement('div');
+                toastContainer.id = 'toastContainer';
+                toastContainer.style.cssText = 'position: fixed; top: 80px; right: 20px; z-index: 9999;';
+                document.body.appendChild(toastContainer);
+            }
+
+            const toastId = 'toast_' + Date.now();
+            const bgClass = type === 'success' ? 'bg-success' : 
+                            type === 'danger' ? 'bg-danger' :
+                            type === 'warning' ? 'bg-warning' : 'bg-info';
+
+            const toastHTML = `
+                <div id="${toastId}" class="toast align-items-center text-white ${bgClass} border-0 mb-2" role="alert">
+                    <div class="d-flex">
+                        <div class="toast-body">${message}</div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                    </div>
+                </div>
+            `;
+
+            toastContainer.insertAdjacentHTML('beforeend', toastHTML);
+            
+            const toastElement = document.getElementById(toastId);
+            const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
+            toast.show();
+
+            toastElement.addEventListener('hidden.bs.toast', function() {
+                toastElement.remove();
+            });
+        }
+
+        function demoLogin(type) {
+            showToast('Sesión iniciada en modo demo', 'success');
+            const modal = bootstrap.Modal.getInstance(document.getElementById('authModal'));
+            modal.hide();
+        }
+    </script>
+</body>
+</html>
